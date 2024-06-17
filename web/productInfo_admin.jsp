@@ -3,7 +3,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
  <head>
- <title>My JSP 'index.jsp' starting page</title>
+ <title>后台管理</title>
  <script type="text/javascript">
  function cancel() {
 	window.location="ProductFindAllServlet";

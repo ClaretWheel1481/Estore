@@ -10,6 +10,9 @@
 </head>
 <%--导航栏--%>
 <jsp:include page="header.jsp"></jsp:include>
+
+<!--登录注册-->
+<jsp:include page="login.jsp"></jsp:include>
 <body>
 <section class="w">
 <div class="product-img">
@@ -34,22 +37,13 @@
                 <li class="">
                     <img src="http://img001.fview.cn/Public/upload/product/e2c7f88b1bd6809ade50c5be45455da0.jpg">
                 </li>
-                <li class="">
-                    <img src="http://img001.fview.cn/Public/upload/product/4cae1678a7b505eea715486651c0f4c7.jpg">
-                </li>
-                <li class="">
-                    <img src="http://img001.fview.cn/Public/upload/product/fee60363efe598aa21d633a3671a4861.jpg">
-                </li>
-                <li class="">
-                    <img src="http://img001.fview.cn/Public/upload/product/76f87b698fe34f6447dd4e53dc052d44.jpg">
-                </li>
             </ul>
         </div>
         <a class="arrow up i-icon"></a>
         <a class="arrow down i-icon"></a>
     </div>
     <div class="view">
-        <img src="/upload/${pro.imgurl }">
+        <img src="/upload/${ pro.imgurl }">
     </div>
 </div>
 <div class="product-details">
@@ -91,6 +85,8 @@
 <script type="text/javascript" src="home/JS/bootstrap.min.js"></script>
 <script type="text/javascript" src="home/JS/bg-canvas.js"></script>
 <script type="text/javascript" src="home/JS/main.js"></script>
-
+<footer>
+    <jsp:include page="footer.jsp"></jsp:include>
+</footer>
 </body>
 </html>

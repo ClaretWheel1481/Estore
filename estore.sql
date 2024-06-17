@@ -102,15 +102,15 @@ INSERT INTO `products` VALUES ('1', 'Apple', '5099', '122', '510108', '1.png', '
 INSERT INTO `products` VALUES ('2', 'Apple', '7099', '23', '510109', '2.png', 'iPhone 15 Pro', '太空黑');
 INSERT INTO `products` VALUES ('3', 'Apple', '11199', '152', '510102', '3.png', 'iPhone 15 Pro Max', '白色');
 INSERT INTO `products` VALUES ('4', 'Samsung', '3699', '220', '510201', '4.png', 'Galaxy S24', '白色');
-INSERT INTO `products` VALUES ('5', 'Samsung', '4749', '456', '510202', '7.jpg', 'Galaxy S23', '银色');
-INSERT INTO `products` VALUES ('6', 'Apple', '6499', '266', '520101', '11.png', 'iPad Pro 2024', '白色');
-INSERT INTO `products` VALUES ('7', 'Apple', '3599', '555', '520102', '12.png', 'iPad Mini 7', '白色');
-INSERT INTO `products` VALUES ('8', '华为', '5449', '9999', '510301', '13.png', 'Huawei Mate 60 Pro', '白色');
-INSERT INTO `products` VALUES ('9', '华为', '5499', '200', '510302', '14.png', 'Huawei Pure 70', '白色');
-INSERT INTO `products` VALUES ('10', '小米', '4499', '12', '510401', '15.jpg', 'XiaoMi 14', '黑色');
-INSERT INTO `products` VALUES ('11', 'MacBook', '6999', '265', '530101', '16.png', 'MacBook Air 2024', '银色');
-INSERT INTO `products` VALUES ('12', 'MacBook', '7299', '999', '530102', '17.jpg', 'MacBook Pro 2024', '银色');
-INSERT INTO `products` VALUES ('13', 'Surface', '8399', '999', '530201', '18.jpg', 'Surface Pro 8', '银色');
+INSERT INTO `products` VALUES ('5', 'Samsung', '4749', '456', '510202', '5.jpg', 'Galaxy S23', '银色');
+INSERT INTO `products` VALUES ('6', 'Apple', '6499', '266', '520101', '6.png', 'iPad Pro 2024', '白色');
+INSERT INTO `products` VALUES ('7', 'Apple', '3599', '555', '520102', '7.png', 'iPad Mini 7', '白色');
+INSERT INTO `products` VALUES ('8', '华为', '5449', '9999', '510301', '8.png', 'Huawei Mate 60 Pro', '白色');
+INSERT INTO `products` VALUES ('9', '华为', '5499', '200', '510302', '9.png', 'Huawei Pure 70', '白色');
+INSERT INTO `products` VALUES ('10', '小米', '4499', '12', '510401', '10.jpg', 'XiaoMi 14', '黑色');
+INSERT INTO `products` VALUES ('11', 'MacBook', '6999', '265', '530101', '11.png', 'MacBook Air 2024', '银色');
+INSERT INTO `products` VALUES ('12', 'MacBook', '7299', '999', '530102', '12.jpg', 'MacBook Pro 2024', '银色');
+INSERT INTO `products` VALUES ('13', 'Surface', '8399', '999', '530201', '13.jpg', 'Surface Pro 8', '银色');
 
 -- ----------------------------
 -- Table structure for `users`
@@ -123,7 +123,6 @@ CREATE TABLE `users` (
   `email` varchar(100) DEFAULT NULL,
   `role` varchar(100) DEFAULT NULL,
   `state` int(11) DEFAULT NULL,
-  `activecode` varchar(100) DEFAULT NULL,
   `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -131,5 +130,5 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '黄林星', '123', '245922575@qq.com', 'user', '1', 'afd7a459-b948-4239-9ad6-29c5a172fa1e', '2024-06-15 23:20:50');
-INSERT INTO `users` VALUES ('2', 'Admin', '123', '111111@qq.com', 'admin', '1', '000000', '2024-06-15 16:44:18');
+INSERT INTO `users` VALUES ('1', '黄林星', '123', '245922575@qq.com', 'user', '1','2024-06-15 23:20:50');
+INSERT INTO `users` VALUES ('2', 'Admin', '123', '111111@qq.com', 'admin', '1','2024-06-15 16:44:18');

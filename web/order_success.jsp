@@ -8,6 +8,9 @@
 </head>
 <%--导航栏--%>
 <jsp:include page="header.jsp"></jsp:include>
+
+<!--登录注册-->
+<jsp:include page="login.jsp"></jsp:include>
 <body>
 <p>交易成功</p>
 

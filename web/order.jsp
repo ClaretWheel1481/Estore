@@ -13,6 +13,9 @@
 <%--导航栏--%>
 <jsp:include page="header.jsp"></jsp:include>
 
+<!--登录注册-->
+<jsp:include page="login.jsp"></jsp:include>
+
  <section class="order">
         <div class="head">订单</div>
         <div class="title">

@@ -14,7 +14,6 @@ public class User {
     private String email; // 邮箱
     private String role; // 角色   默认是user
     private int state; // 是否激活  0 未激活
-    private String activecode; // 激活码  UUID获取
     private Timestamp updatetime; // 更新时间
 
     public int getId() {
@@ -63,14 +62,6 @@ public class User {
 
     public void setState(int state) {
         this.state = state;
-    }
-
-    public String getActivecode() {
-        return activecode;
-    }
-
-    public void setActivecode(String activecode) {
-        this.activecode = activecode;
     }
 
     public Timestamp getUpdatetime() {

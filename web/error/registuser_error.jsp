@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>注册信息</title>
+<title>注册失败</title>
 </head>
 <body>
 	<center>

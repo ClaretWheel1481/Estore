@@ -15,8 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.beanutils.BeanUtils;
 
 import cn.nsu.edu.estore.domain.User;
-import cn.nsu.edu.estore.exception.ActiveCodeException;
-import cn.nsu.edu.estore.exception.LoginException;
 import cn.nsu.edu.estore.service.UserService;
 
 /**
@@ -113,12 +111,6 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect("http://localhost:8080/Estore"); // 请求转发只能在本站内跳转........登录成功应该加上用户信息*******
             return;
 
-        } catch (ActiveCodeException e) {
-            e.printStackTrace();
-            request.setAttribute("login.message", e.getMessage());
-            request.getRequestDispatcher("/home.jsp")
-                    .forward(request, response);
-            return;
         } catch (javax.security.auth.login.LoginException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

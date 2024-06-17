@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>后台管理</title>
 <script type="text/javascript">
 	function del(id) {
 
@@ -56,14 +56,12 @@
 </head>
 
 <body>
+<c:if test="${empty pro}">
+	无商品信息<br>
+	<a href="${pageContext.request.contextPath}/CategoryServlet">添加</a>
+</c:if>
 
-	<c:if test="${empty pro}">
-		无商品信息<br>
-		<a href="${pageContext.request.contextPath}/CategoryServlet">添加</a>
-	</c:if>
-
-
-	<c:if test="${not empty pro}">
+<c:if test="${not empty pro}">
 		<div align="center">
 			<form action="${pageContext.request.contextPath}/ProductSimpleServlet" method="post" id="s">
 			<select name="field">

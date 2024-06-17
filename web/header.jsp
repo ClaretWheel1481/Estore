@@ -12,35 +12,25 @@
         var username=document.getElementById("username");
         username.value=window.decodeURIComponent("${cookie.remember.value}","utf-8");
     };
-    function change() {
-        document.getElementById("cimg").src = "${pageContext.request.contextPath}/checkImg?time="
-            + new Date().getTime();
-    };
-
-    function findProductById(id){
-        location.href="http://localhost:8080/Estore/ProductFindByIdServlet?id="+id;
-    };
-    function phone(obj) {
-        location.href="${pageContext.request.contextPath}/FindCategoryServlet?name="+encodeURIComponent(encodeURIComponent(obj));
-    }
     function tocart() {
         location.href="http://localhost:8080/Estore/showcart.jsp";
+    }
+    function toHome() {
+        location.href="http://localhost:8080/Estore/home.jsp";
     }
 </script>
 <html>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>首页</title>
 <link rel="stylesheet" type="text/css" href="home/CSS/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="home/CSS/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
 <header>
     <nav class="navbar navbar-inverse" role="navigation">
-        <div class="logo"></div>
-        <a href="#">首页</a>
+        <div class="logo" onclick="toHome()"></div>
+        <a onclick="toHome()">首页</a>
         <a href="javascript:void(0)" onclick="phone('手机')">手机</a>
         <a href="javascript:void(0)" onclick="phone('平板')">平板</a>
         <a href="javascript:void(0)" onclick="phone('笔记本')">笔记本</a>
-        <a href="javascript:void(0)" onclick="phone('配件')">配件</a>
         <i class="carts" onclick="tocart()"></i>
         <span><c:if test="${not empty user }">
             <h4 class="user">${user.username}</h4>

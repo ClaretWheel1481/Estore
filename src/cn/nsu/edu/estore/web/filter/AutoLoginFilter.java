@@ -1,25 +1,5 @@
 package cn.nsu.edu.estore.web.filter;
 
-import java.io.IOException;
-import java.net.URLDecoder;
-
-import javax.servlet.FilterChain;
-import javax.servlet.FilterConfig;
-import javax.servlet.ServletException;
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-
-import cn.nsu.edu.estore.domain.User;
-import cn.nsu.edu.estore.exception.ActiveCodeException;
-import cn.nsu.edu.estore.exception.LoginException;
-import cn.nsu.edu.estore.service.UserService;
-import cn.nsu.edu.estore.utils.CookieUtils;
-
 /**
  * Servlet implementation class AutoLoginFilter
  */

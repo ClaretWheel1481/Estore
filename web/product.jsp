@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>product</title>
+<title>产品</title>
 <link rel="stylesheet" type="text/css" href="home/CSS/jquery-ui.css">
 <link rel="stylesheet" type="text/css" href="home/CSS/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
@@ -33,84 +33,7 @@ function showck(obj) {
 <jsp:include page="header.jsp"></jsp:include>
 
 <!--登录注册-->
-<div id="log-wrapper" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"
-     aria-hidden="true">
-    <div class="modal-content modal-dialog" id="log-move">
-        <canvas id="myCanvas"></canvas>
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span></button>
-        <div id="log">
-            <div id="navs-slider">
-                <a id="#signin" class="active">登录</a>
-                <a id="#signup">注册</a>
-                <span class="navs-slider-bar"></span>
-            </div>
-            <form id="sign-form-1" action="${pageContext.request.contextPath}/LoginServlet" method="post">
-                <div class="group-inputs">
-                    <div class="username input-wrapper">
-                        <input aria-label="用户名/邮箱" placeholder="用户名/邮箱" required="" type="text" value=""
-                               name="username" id="signup-email_adress">
-                    </div>
-                    <div class="input-wrapper password">
-                        <input required="" type="password" id="password-1" name="password" aria-label="密码"
-                               placeholder="密码">
-                        <span id="password_message-1"></span>
-                    </div>
-                    <div class="captcha input-wrapper" data-type="en">
-                        <input id="captcha" name="captcha" placeholder="验证码" required="" data-rule-required="true"
-                               data-msg-required="请填写验证码">
-                        <img class="captcha-img" data-toggle="tooltip" data-placement="top" title="看不清楚？换一张"
-                             alt="验证码" src="${pageContext.request.contextPath}/checkImg" id="cimg" onclick="change()">
-                    </div>
-                </div>
-                <div id="check-div">
-                    <input type="checkbox" id="remember" name="remember" value="on"/>
-                    <label for="remember"></label><em>记住用户</em>
-                    <input type="checkbox" id="autologin" name="autologin" value="on"/>
-                    <label for="autologin"></label> <em>自动登陆</em>
-                </div>
-                <div class="sign-btn">
-                    <button class="sign-button submit" type="submit">登录</button>
-                </div>
-            </form>
-            <form id="sign-form-2" action="${pageContext.request.contextPath}/RegistServlet" method="post">
-                <div class="group-inputs">
-                    <div class="username input-wrapper">
-                        <input aria-label="用户名" placeholder="用户名" required="" type="text" value=""
-                               name="username">
-                        <span id="username_message"></span>
-                    </div>
-                    <div class="email input-wrapper">
-                        <input aria-label="邮箱" placeholder="邮箱" required="" type="text" value=""
-                               name="email" id="email_adress">
-                        <span id="email_message"></span>
-                    </div>
-                    <div class="input-wrapper password">
-                        <input required="" type="password" id="password" name="password" aria-label="密码"
-                               placeholder="密码（不少于 6 位）">
-                        <span id="password_message"></span>
-                    </div>
-                    <div class="input-wrapper password">
-                        <input required="" type="password" id="repassword" name="repassword" aria-label="重复密码"
-                               placeholder="重复密码">
-                        <span id="repassword_message"></span>
-                    </div>
-                    <div class="captcha input-wrapper" data-type="en">
-                        <input id="captcha-1" name="captcha" placeholder="验证码" required="" data-rule-required="true"
-                               data-msg-required="请填写验证码">
-                        <img class="captcha-img" data-toggle="tooltip" data-placement="top" title="看不清楚？换一张"
-                             alt="验证码" src="${pageContext.request.contextPath}/checkImg" id="cimg" onclick="change()">
-                        <span id="checkcode_message"></span>
-                    </div>
-                </div>
-                <div class="sign-btn">
-                    <button class="sign-button submit" type="submit">注册</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
-</div>
-<!--登录注册END-->
+<jsp:include page="login.jsp"></jsp:include>
 
 <section class="page">
     <aside id="aside" class="panel-group aside-menu">
@@ -149,26 +72,8 @@ function showck(obj) {
 		</c:if></li>
     </ul>
 </section>
-<aside class="aside-tool">
-    <ul>
-        <li class="customer">
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=476759153&site=qq&menu=yes" target=_blank
-               clickid=guanwang_navigation_customer>联系客服</a>
-        </li>
-        <li class="top"></li>
-    </ul>
-</aside>
 <footer>
-   <div>
-       <ul>
-           <li>开发人员1</li>
-           <li>唐宗博</li>
-       </ul>
-       <ul>
-           <li>开发人员2</li>
-           <li>辜鹏</li>
-       </ul>
-    </div>
+    <jsp:include page="footer.jsp"></jsp:include>
 </footer>
 <script type="text/javascript" src="home/JS/jquery.min.js"></script>
 <script type="text/javascript" src="home/JS/jquery-ui.js"></script>

@@ -30,12 +30,12 @@ public class MailUtils {
 
         //2.通过session获取Transport对象（发送邮件的核心API）
         Transport ts=session.getTransport();
-        //3.通过邮件用户名密码（授权码 ）链接
+        //3.通过邮件用户名密码（授权码）链接
         ts.connect("245922575@qq.com", "luieogpfuozrcbee");
 
         //4.创建邮件
         Message msg=createSimpleMail(session,email,emailInfo);
-
+        System.out.println("发送邮件！");
         //5.发送电子邮件
         ts.sendMessage(msg, msg.getAllRecipients());
     }

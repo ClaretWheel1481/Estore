@@ -132,7 +132,10 @@ function changeCount(id, count, pnum) {
 </script>
 <%--导航栏--%>
 <jsp:include page="header.jsp"></jsp:include>
-<!--登录注册END-->
+
+<!--登录注册-->
+<jsp:include page="login.jsp"></jsp:include>
+
 <c:if test="${ empty cart }">
 	购物车中没有商品
 </c:if>
@@ -178,9 +181,9 @@ function changeCount(id, count, pnum) {
             <li>
                 <ul class="carts-type">
                     <li><span>颜色</span><a>${c.key.color}</a></li>
-                    <li><span>内存</span><a>64G</a></li>
-                    <li><span>版本</span><a>联通4G/移动4G/电信4G</a></li>
-                    <li><span>销售地区</span><a>加拿大</a></li>
+                    <li><span>内存</span><a>512G</a></li>
+                    <li><span>版本</span><a>全网通</a></li>
+                    <li><span>销售地区</span><a>中国</a></li>
                 </ul>
             </li>
             <li><span class="price">${c.key.price }</span></li>
