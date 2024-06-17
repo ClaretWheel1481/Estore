@@ -11,11 +11,9 @@
             var flag = window.confirm("确认删除吗");
             if (flag) {
                 //确认删除
-                location.href = "${pageContext.request.contextPath}/ProductDelByIdServlet?id="
-                    + id;
+                location.href = "${pageContext.request.contextPath}/ProductDelByIdServlet?id=" + id;
             }
         };
-
         function change() {
             //得到id为main的这个checkbox
             var main = document.getElementById("main");
@@ -39,7 +37,7 @@
 
         function sel() {
             var msg = document.getElementById("msg").value;
-            if (msg == null || msg == "")
+            if (msg == null || msg === "")
                 alert("请输入你要查询的内容！！！");
             document.getElementById("s").submit();
 

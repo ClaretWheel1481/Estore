@@ -6,7 +6,7 @@
 
 <!--    <filter>-->
 <!--        <filter-name>EncodingFilter</filter-name>-->
-<!--        <filter-class>cn.nsu.edu.estore.web.filter.EncodingFilter</filter-class>-->
+<!--        <filter-class>filter.web.org.qvtu.hlx307.estore.EncodingFilter</filter-class>-->
 <!--    </filter>-->
 <!--    <filter-mapping>-->
 <!--        <filter-name>EncodingFilter</filter-name>-->

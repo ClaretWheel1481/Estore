@@ -1,6 +1,6 @@
-(function($) {
+(function ($) {
     /*Preloader*/
-    $(window).on('load',function () {
+    $(window).on('load', function () {
         $('#status').fadeOut();
         $('#preloader').delay(300).fadeOut('slow');
     });
@@ -38,28 +38,28 @@
             $('body,html').animate({scrollTop: 0}, speed);
         });
 
-        
-    	var t = $(".details .text-box");
 
-    	$('.details .min').attr('disabled',true);
+        var t = $(".details .text-box");
 
-        	$(".details .add").click(function(){    
-           	 t.val(parseInt(t.val())+1)
-           	 if (parseInt(t.val())!=1){
-               	 $('.details .min').attr('disabled',false);
-            	}
-       	 }) 
+        $('.details .min').attr('disabled', true);
 
-        	$(".details .min").click(function(){
-            	t.val(parseInt(t.val())-1);
-            	if (parseInt(t.val())==1){
-               	 $('.details .min').attr('disabled',true);
-            	}
-        	})  
+        $(".details .add").click(function () {
+            t.val(parseInt(t.val()) + 1)
+            if (parseInt(t.val()) != 1) {
+                $('.details .min').attr('disabled', false);
+            }
+        })
 
-        	$(".sum-btn").bind("click",function(){
-        		alert("已提交订单！确定将返回首页！");
-        	});
+        $(".details .min").click(function () {
+            t.val(parseInt(t.val()) - 1);
+            if (parseInt(t.val()) == 1) {
+                $('.details .min').attr('disabled', true);
+            }
+        })
+        //FIXME:提交订单时会弹出三次
+        $(".sum-btn").bind("click", function () {
+            alert("已提交订单！");
+        });
         //产品选择
         $('.Checkbox label').on('click', function () {
             var t = $(this);

@@ -138,7 +138,7 @@
                 <li>型号</li>
                 <li>单价</li>
                 <li>数量</li>
-                <li>金额</li>
+                <li>总金额</li>
                 <li>操作</li>
             </ul>
         </div>
@@ -168,7 +168,7 @@
                             <li><span>销售地区</span><a>中国</a></li>
                         </ul>
                     </li>
-                    <li><span class="price">${c.key.price }</span></li>
+                    <li><span class="price">${ c.key.price }</span></li>
                     <li>
                         <div class="count-box">
                             <input class="min" name="" type="button" value="-"

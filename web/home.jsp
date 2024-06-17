@@ -75,10 +75,10 @@
 </div>
 
 <section class="sec1">
-    <a><img src="home/img/8cbbaae5979d138dbc9e9616a06ba125.png" onclick="findProductById('1')"></a>
-    <a><img src="home/img/387064f7e285263ac3ef81dd09baf5e4.png" onclick="findProductById('2')"></a>
-    <a><img src="home/img/dd1c6b91990dee6177ad2ef4c1fb076e.png" onclick="findProductById('5')"></a>
-    <a><img src="home/img/62f38e9081afaf20535678571aaf6b3b.jpg" onclick="findProductById('10')"></a>
+    <a><img src="home/img/homepage1.png" onclick="findProductById('14')"></a>
+    <a><img src="home/img/homepage3.png" onclick="findProductById('13')"></a>
+    <a><img src="home/img/homepage4.png" onclick="findProductById('9')"></a>
+    <a><img src="home/img/homepage2.png" onclick="findProductById('10')"></a>
 </section>
 <section class="sec2">
     <h3>手机</h3>

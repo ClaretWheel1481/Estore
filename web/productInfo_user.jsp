@@ -73,7 +73,7 @@
         </div>
     </c:if>
     <c:if test="${empty user}">
-        <li><a class="signin" data-toggle="modal" data-target="#log-wrapper">请先登录</a></li>
+        <div class="action"><a class="addCar" data-toggle="modal" data-target="#log-wrapper">请先登录</a></div>
     </c:if>
 
 </div>

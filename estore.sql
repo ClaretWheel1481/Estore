@@ -26,6 +26,8 @@ INSERT INTO `category` VALUES ('510301', 'Huawei Mate 60 Pro', '5103');
 INSERT INTO `category` VALUES ('510302', 'Huawei Pure 70', '5103');
 INSERT INTO `category` VALUES ('5104', '小米', '51');
 INSERT INTO `category` VALUES ('510401', 'XiaoMi 14', '5104');
+INSERT INTO `category` VALUES ('5105', '魅族', '51');
+INSERT INTO `category` VALUES ('510501', 'MEIZU 21 Note', '5105');
 INSERT INTO `category` VALUES ('52', '平板', '0');
 INSERT INTO `category` VALUES ('5201', 'Apple', '52');
 INSERT INTO `category` VALUES ('520101', 'iPad Pro 2024', '5201');
@@ -74,20 +76,20 @@ CREATE TABLE `products` (
 -- ----------------------------
 -- Records of products
 -- ----------------------------
-INSERT INTO `products` VALUES ('1', 'Apple', '5099', '122', '510108', '1.png', 'iPhone 15', '黑色');
-INSERT INTO `products` VALUES ('2', 'Apple', '7099', '23', '510109', '2.png', 'iPhone 15 Pro', '太空黑');
-INSERT INTO `products` VALUES ('3', 'Apple', '11199', '152', '510102', '3.png', 'iPhone 15 Pro Max', '白色');
-INSERT INTO `products` VALUES ('4', 'Samsung', '3699', '220', '510201', '4.png', 'Galaxy S24', '白色');
+INSERT INTO `products` VALUES ('1', 'Apple', '5099', '122', '510108', '1.jpg', 'iPhone 15', '黑色');
+INSERT INTO `products` VALUES ('2', 'Apple', '7099', '23', '510109', '2.jpg', 'iPhone 15 Pro', '太空黑');
+INSERT INTO `products` VALUES ('3', 'Apple', '11199', '152', '510102', '3.jpg', 'iPhone 15 Pro Max', '白色');
+INSERT INTO `products` VALUES ('4', 'Samsung', '3699', '220', '510201', '4.jpg', 'Galaxy S24', '白色');
 INSERT INTO `products` VALUES ('5', 'Samsung', '4749', '456', '510202', '5.jpg', 'Galaxy S23', '银色');
-INSERT INTO `products` VALUES ('6', 'Apple', '6499', '266', '520101', '6.png', 'iPad Pro 2024', '白色');
-INSERT INTO `products` VALUES ('7', 'Apple', '3599', '555', '520102', '7.png', 'iPad Mini 7', '白色');
-INSERT INTO `products` VALUES ('8', '华为', '5449', '9999', '510301', '8.png', 'Huawei Mate 60 Pro', '白色');
-INSERT INTO `products` VALUES ('9', '华为', '5499', '200', '510302', '9.png', 'Huawei Pure 70', '白色');
-INSERT INTO `products` VALUES ('10', '小米', '4499', '12', '510401', '10.jpg', 'XiaoMi 14', '黑色');
-INSERT INTO `products` VALUES ('11', 'MacBook', '6999', '265', '530101', '11.png', 'MacBook Air 2024', '银色');
-INSERT INTO `products` VALUES ('12', 'MacBook', '7299', '999', '530102', '12.jpg', 'MacBook Pro 2024', '银色');
+INSERT INTO `products` VALUES ('6', 'Apple', '6499', '266', '520101', '6.jpg', 'iPad Pro 2024', '白色');
+INSERT INTO `products` VALUES ('7', 'Apple', '3599', '555', '520102', '7.jpg', 'iPad Mini 7', '白色');
+INSERT INTO `products` VALUES ('8', '华为', '5449', '9999', '510301', '8.jpg', 'Huawei Mate 60 Pro', '白色');
+INSERT INTO `products` VALUES ('9', '华为', '5499', '200', '510302', '9.jpg', 'Huawei Pura 70', '白色');
+INSERT INTO `products` VALUES ('10', '小米', '4499', '12', '510401', '10.jpg', 'Xiaomi 14', '黑色');
+INSERT INTO `products` VALUES ('11', 'MacBook', '7999', '265', '530101', '11.jpg', 'MacBook Air 2024', '银色');
+INSERT INTO `products` VALUES ('12', 'MacBook', '11299', '999', '530102', '12.jpg', 'MacBook Pro 2024', '银色');
 INSERT INTO `products` VALUES ('13', 'Surface', '11188', '999', '530202', '13.jpg', 'Surface Laptop 7', '银色');
-
+INSERT INTO `products` VALUES ('14', '魅族', '2599', '999', '510501', '14.jpg', 'MEIZU 21 Note', '魅族白');
 -- ----------------------------
 -- Table structure for `users`
 -- ----------------------------

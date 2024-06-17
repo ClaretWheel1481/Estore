@@ -19,9 +19,8 @@
 
     function fun() {
         var time = document.getElementById("s").innerHTML;
-
         //判断如果等于0了，不在进行调用fun函数，
-        if (time == 0) {
+        if (time === 0) {
             window.clearInterval(interval);
             return;
         }
