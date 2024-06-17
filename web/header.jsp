@@ -1,6 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <script type="text/javascript" src="home/JS/jquery.min.js"></script>
 <script type="text/javascript" src="home/JS/jquery-ui.js"></script>
@@ -8,15 +8,17 @@
 <script type="text/javascript" src="home/JS/bg-canvas.js"></script>
 <script type="text/javascript" src="home/JS/main.js"></script>
 <script type="text/javascript">
-    window.onload=function(){
-        var username=document.getElementById("username");
-        username.value=window.decodeURIComponent("${cookie.remember.value}","utf-8");
+    window.onload = function () {
+        var username = document.getElementById("username");
+        username.value = window.decodeURIComponent("${cookie.remember.value}", "utf-8");
     };
+
     function tocart() {
-        location.href="http://localhost:8080/Estore/showcart.jsp";
+        location.href = "http://localhost:8080/Estore/showcart.jsp";
     }
+
     function toHome() {
-        location.href="http://localhost:8080/Estore/home.jsp";
+        location.href = "http://localhost:8080/Estore/home.jsp";
     }
 </script>
 <html>
@@ -26,7 +28,7 @@
 <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
 <header>
     <nav class="navbar navbar-inverse" role="navigation">
-        <div class="logo" onclick="toHome()"></div>
+        <img src="home/img/logo.png" class="logo" onclick="toHome()"/>
         <a onclick="toHome()">首页</a>
         <a href="javascript:void(0)" onclick="phone('手机')">手机</a>
         <a href="javascript:void(0)" onclick="phone('平板')">平板</a>

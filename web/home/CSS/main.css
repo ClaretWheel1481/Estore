@@ -121,10 +121,14 @@ header {
 .logo{
     height: 60px;
     width: 180px;
-    background: url("../img/logo.png") no-repeat;
     position: absolute;
     left: 4%;
     top: calc(50% - 30px);
+}
+
+.disabled {
+    color: grey;
+    pointer-events: none;
 }
 
 header nav > a {

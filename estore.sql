@@ -35,8 +35,8 @@ INSERT INTO `category` VALUES ('5301', 'MacBook', '53');
 INSERT INTO `category` VALUES ('530101', 'MacBook Air 2024', '5301');
 INSERT INTO `category` VALUES ('530102', 'MacBook Pro 2024', '5301');
 INSERT INTO `category` VALUES ('5302', 'Surface', '53');
-INSERT INTO `category` VALUES ('530201', 'Surface Pro 8', '5302');
-INSERT INTO `category` VALUES ('530202', 'Surface Laptop 5', '5302');
+INSERT INTO `category` VALUES ('530201', 'Surface Pro 11', '5302');
+INSERT INTO `category` VALUES ('530202', 'Surface Laptop 7', '5302');
 INSERT INTO `category` VALUES (null, null, null);
 
 -- ----------------------------
@@ -110,7 +110,7 @@ INSERT INTO `products` VALUES ('9', '华为', '5499', '200', '510302', '9.png', 
 INSERT INTO `products` VALUES ('10', '小米', '4499', '12', '510401', '10.jpg', 'XiaoMi 14', '黑色');
 INSERT INTO `products` VALUES ('11', 'MacBook', '6999', '265', '530101', '11.png', 'MacBook Air 2024', '银色');
 INSERT INTO `products` VALUES ('12', 'MacBook', '7299', '999', '530102', '12.jpg', 'MacBook Pro 2024', '银色');
-INSERT INTO `products` VALUES ('13', 'Surface', '8399', '999', '530201', '13.jpg', 'Surface Pro 8', '银色');
+INSERT INTO `products` VALUES ('13', 'Surface', '11188', '999', '530202', '13.jpg', 'Surface Laptop 7', '银色');
 
 -- ----------------------------
 -- Table structure for `users`

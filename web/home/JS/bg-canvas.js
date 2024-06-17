@@ -1,6 +1,4 @@
-/**
- * Created by WHY on 2016/12/5.
- */
+
 function bg_canvas() {
     //获取窗口宽高
     var w = 400;

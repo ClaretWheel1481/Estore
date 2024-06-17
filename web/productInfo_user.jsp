@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>单个商品详细信息</title>
+<title>${pro.description}</title>
 <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
 </head>
 <%--导航栏--%>
@@ -51,7 +51,7 @@
     <p class="re"><span>产品编号：</span><span>RE201612101843132</span></p>
     <p class="price" data-price="3649">
         <span>价格</span>
-        <span class="price">${pro.price }</span>
+        <span class="price">${ pro.price }</span>
     </p>
     <ul class="details">
         <li><span>颜色</span><a class="u-check n-check">${ pro.color }</a></li>
@@ -67,8 +67,6 @@
         </li>
     </ul>
     <div class="action">
-        <a class="buy"	href="fastbuy.jsp">立即购买</a>
-        
        <a class="addCar" onclick="addProductToCart('${pro.id}')"><i></i>加入购物车</a>
     </div>
 </div>
@@ -76,7 +74,6 @@
 
 <script type="text/javascript">
 	function addProductToCart(id){
-		
 		location.href="${pageContext.request.contextPath}/AddProductToCartServlet?id="+id;
 	}
 </script>

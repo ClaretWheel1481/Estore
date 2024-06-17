@@ -1,6 +1,3 @@
-/**
- * Created by WHY on 2016/12/13.
- */
 (function($) {
     /*Preloader*/
     $(window).on('load',function () {
