@@ -11,14 +11,8 @@
     <link rel="stylesheet" type="text/css" href="home/CSS/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
     <script type="text/javascript">
-        window.onload = function () {
-            var username = document.getElementById("username");
-            username.value = window.decodeURIComponent("${cookie.remember.value}", "utf-8");
-        };
-
         function change() {
-            document.getElementById("cimg").src = "${pageContext.request.contextPath}/checkImg?time="
-                + new Date().getTime();
+            document.getElementById("cimg").src = "${pageContext.request.contextPath}/checkImg?time=" + new Date().getTime();
         }
 
         function findProductById(id) {
@@ -41,7 +35,6 @@
 
 <%--导航栏--%>
 <jsp:include page="header.jsp"></jsp:include>
-
 <!--登录注册-->
 <jsp:include page="login.jsp"></jsp:include>
 <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">

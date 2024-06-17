@@ -7,10 +7,6 @@
 <title>注册失败</title>
 </head>
 <body>
-	<center>
-		 <!-- 服务器回送注册失败的错误信息	START -->
-		 ${requestScope["regist.message"]} 
-		 <!-- 服务器回送注册失败的错误信息	END -->
-	</center>
+	 ${requestScope["regist.message"]}
 </body>
 </html>

@@ -92,7 +92,7 @@
 <script type="text/javascript" src="home/JS/bootstrap.min.js"></script>
 <script type="text/javascript" src="home/JS/bg-canvas.js"></script>
 <script type="text/javascript" src="home/JS/main.js"></script>
-<script type="text/javascript" src="CategoryJS/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="CategoryJS/jquery-3.7.1.min.js"></script>
 <script type="text/javascript" src="CategoryJS/onloada.js"></script>
 </body>
 </html>

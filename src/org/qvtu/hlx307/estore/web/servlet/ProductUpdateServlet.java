@@ -77,9 +77,7 @@ public class ProductUpdateServlet extends HttpServlet {
             try {
                 BeanUtils.populate(product, map);
                 service.update(product);
-
                 request.getRequestDispatcher("/ProductFindAllServlet").forward(request, response);
-                return;
             } catch (SQLException e) {
                 e.printStackTrace();
                 request.getSession().setAttribute("add.message", e.getMessage());

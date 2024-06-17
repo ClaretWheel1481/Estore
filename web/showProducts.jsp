@@ -14,6 +14,7 @@
                 location.href = "${pageContext.request.contextPath}/ProductDelByIdServlet?id=" + id;
             }
         };
+
         function change() {
             //得到id为main的这个checkbox
             var main = document.getElementById("main");
@@ -32,20 +33,20 @@
                 //确认删除
                 document.getElementById("f").submit();//表单提交
             }
-            var cks = document.getElementsByName("ck");
         };
 
         function sel() {
             var msg = document.getElementById("msg").value;
             if (msg == null || msg === "")
-                alert("请输入你要查询的内容！！！");
+                alert("请输入你要查询的内容！");
             document.getElementById("s").submit();
-
         }
     </script>
 </head>
 
 <body>
+<%--导航栏--%>
+<jsp:include page="adminheader.jsp"></jsp:include>
 <c:if test="${empty pro}">
     无商品信息<br>
     <a href="${pageContext.request.contextPath}/CategoryServlet">添加</a>
@@ -89,7 +90,7 @@
                     <td>${p.pnum }</td>
                     <td>${p.c3code }</td>
                     <td>${p.color }</td>
-                    <td height="160" width="300"><img alt="图片不存在或已删除" src="/upload/${p.imgurl}" width="300"
+                    <td height="300" width="300"><img alt="图片不存在或已删除" src="/upload/${p.imgurl}" width="300"
                                                       height="160"></td>
                     <td>${p.description }</td>
                     <td><a

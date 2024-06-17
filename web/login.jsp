@@ -27,7 +27,7 @@
                 <span class="navs-slider-bar"></span>
             </div>
 
-            <form id="sign-form-1" action="${pageContext.request.contextPath}/LoginServlet" method="post">
+            <form id="sign-form-1" action="${pageContext.request.contextPath}/LoginServlet" method="get">
                 <div class="group-inputs">
                     <div class="username input-wrapper">
                         <input aria-label="用户名/邮箱" placeholder="用户名/邮箱" required="" type="text" value=""
@@ -84,6 +84,5 @@
             </form>
         </div>
     </div>
-</div>
 </div>
 </html>

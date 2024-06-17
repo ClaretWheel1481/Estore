@@ -84,7 +84,6 @@
 		location.href="${pageContext.request.contextPath}/AddProductToCartServlet?id="+id;
 	}
 </script>
-<script type="text/javascript" src="home/JS/jquery.min.js"></script>
 <script type="text/javascript" src="home/JS/jquery-ui.js"></script>
 <script type="text/javascript" src="home/JS/bootstrap.min.js"></script>
 <script type="text/javascript" src="home/JS/bg-canvas.js"></script>

@@ -39,7 +39,6 @@ INSERT INTO `category` VALUES ('530102', 'MacBook Pro 2024', '5301');
 INSERT INTO `category` VALUES ('5302', 'Surface', '53');
 INSERT INTO `category` VALUES ('530201', 'Surface Pro 11', '5302');
 INSERT INTO `category` VALUES ('530202', 'Surface Laptop 7', '5302');
-INSERT INTO `category` VALUES (null, null, null);
 
 -- ----------------------------
 -- Table structure for `orders`
@@ -79,8 +78,8 @@ CREATE TABLE `products` (
 INSERT INTO `products` VALUES ('1', 'Apple', '5099', '122', '510108', '1.jpg', 'iPhone 15', '黑色');
 INSERT INTO `products` VALUES ('2', 'Apple', '7099', '23', '510109', '2.jpg', 'iPhone 15 Pro', '太空黑');
 INSERT INTO `products` VALUES ('3', 'Apple', '11199', '152', '510102', '3.jpg', 'iPhone 15 Pro Max', '白色');
-INSERT INTO `products` VALUES ('4', 'Samsung', '3699', '220', '510201', '4.jpg', 'Galaxy S24', '白色');
-INSERT INTO `products` VALUES ('5', 'Samsung', '4749', '456', '510202', '5.jpg', 'Galaxy S23', '银色');
+INSERT INTO `products` VALUES ('4', 'Samsung', '4699', '220', '510201', '4.jpg', 'Galaxy S24', '白色');
+INSERT INTO `products` VALUES ('5', 'Samsung', '3549', '456', '510202', '5.jpg', 'Galaxy S23', '银色');
 INSERT INTO `products` VALUES ('6', 'Apple', '6499', '266', '520101', '6.jpg', 'iPad Pro 2024', '白色');
 INSERT INTO `products` VALUES ('7', 'Apple', '3599', '555', '520102', '7.jpg', 'iPad Mini 7', '白色');
 INSERT INTO `products` VALUES ('8', '华为', '5449', '9999', '510301', '8.jpg', 'Huawei Mate 60 Pro', '白色');
@@ -90,6 +89,7 @@ INSERT INTO `products` VALUES ('11', 'MacBook', '7999', '265', '530101', '11.jpg
 INSERT INTO `products` VALUES ('12', 'MacBook', '11299', '999', '530102', '12.jpg', 'MacBook Pro 2024', '银色');
 INSERT INTO `products` VALUES ('13', 'Surface', '11188', '999', '530202', '13.jpg', 'Surface Laptop 7', '银色');
 INSERT INTO `products` VALUES ('14', '魅族', '2599', '999', '510501', '14.jpg', 'MEIZU 21 Note', '魅族白');
+INSERT INTO `products` VALUES ('15', 'Surface', '8688', '999', '530201', '15.jpg', 'Surface Pro 11', '银色');
 -- ----------------------------
 -- Table structure for `users`
 -- ----------------------------

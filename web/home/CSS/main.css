@@ -345,25 +345,6 @@ input:-moz-placeholder {
     border-top: 1px solid #d5d5d5;
 }
 
-.captcha {
-    height: 0;
-}
-
-#captcha, #captcha-1 {
-    background-color: #fbfbfb;
-}
-
-.captcha-img {
-    position: absolute;
-    top: 50%;
-    right: .5em;
-    margin-top: -19px;
-    width: 100px;
-    height: 38px;
-    border-left: 1px solid #d5d5d5;
-    cursor: pointer;
-}
-
 /*input样式END*/
 
 /*单选框样式*/
@@ -432,30 +413,6 @@ form .Checkbox {
 #autologin:checked + label:before {
     right: 68px;
 }
-
-/*单选框样式END*/
-/*验证错误提示*/
-form span {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: #fff;
-    height: 49px;
-    text-align: center;
-    line-height: 49px;
-    color: #c33;
-    -webkit-transition: .25s ease-out;
-    transition: .25s ease-out;
-    border-left: 5px solid #fff;
-    border-right: 5px solid #fff;
-    -webkit-transform: translateX(200px);
-    -moz-transform: translateX(200px);
-    -ms-transform: translateX(200px);
-    -o-transform: translateX(200px);
-    transform: translateX(200px);
-}
-
-/*验证错误提示END*/
 
 /*登陆注册按钮*/
 .sign-btn {
