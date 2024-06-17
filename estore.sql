@@ -56,30 +56,6 @@ CREATE TABLE `orders` (
 ) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
--- Records of orders
--- ----------------------------
-INSERT INTO `orders` VALUES ('1', '2247', '', '0', '2024-06-15 12:15:47', null);
-INSERT INTO `orders` VALUES ('2', '0', null, '0', '2024-06-12 18:50:42', null);
-INSERT INTO `orders` VALUES ('3', '0', null, '0', '2024-06-15 11:01:18', null);
-INSERT INTO `orders` VALUES ('4', '0', null, '0', '2024-06-15 11:07:23', null);
-INSERT INTO `orders` VALUES ('5', '0', null, '0', '2024-06-15 11:08:39', null);
-INSERT INTO `orders` VALUES ('6', '0', null, '0', '2024-06-15 11:09:58', null);
-INSERT INTO `orders` VALUES ('7', '0', null, '0', '2024-06-15 11:19:46', null);
-INSERT INTO `orders` VALUES ('8', '0', null, '0', '2024-06-15 11:44:47', null);
-INSERT INTO `orders` VALUES ('9', '0', null, '0', '2024-06-15 11:56:51', null);
-INSERT INTO `orders` VALUES ('10', '0', null, '0', '2024-06-15 12:05:40', null);
-INSERT INTO `orders` VALUES ('11', '0', null, '0', '2024-06-15 12:06:05', null);
-INSERT INTO `orders` VALUES ('12', '0', null, '0', '2024-06-11 10:51:18', null);
-INSERT INTO `orders` VALUES ('13', '0', null, '0', '2024-06-11 10:51:49', null);
-INSERT INTO `orders` VALUES ('14', '0', null, '0', '2024-06-08 21:45:16', null);
-INSERT INTO `orders` VALUES ('15', '0', null, '0', '2024-06-08 21:47:36', null);
-INSERT INTO `orders` VALUES ('16', '0', null, '0', '2024-06-08 21:48:11', null);
-INSERT INTO `orders` VALUES ('17', '0', null, '0', '2024-06-02 11:04:03', null);
-INSERT INTO `orders` VALUES ('18', '0', null, '0', '2024-06-01 14:46:16', null);
-INSERT INTO `orders` VALUES ('19', '0', null, '0', '2024-05-18 21:13:05', null);
-INSERT INTO `orders` VALUES ('20', '0', null, '0', '2024-05-01 15:12:13', null);
-
--- ----------------------------
 -- Table structure for `products`
 -- ----------------------------
 DROP TABLE IF EXISTS `products`;

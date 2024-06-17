@@ -66,9 +66,16 @@
                 </div>
         </li>
     </ul>
-    <div class="action">
-       <a class="addCar" onclick="addProductToCart('${pro.id}')"><i></i>加入购物车</a>
-    </div>
+    <%--判断user.username是否为空显示不同组件--%>
+    <c:if test="${not empty user}">
+        <div class="action">
+            <a class="addCar" onclick="addProductToCart('${pro.id}')"><i></i>加入购物车</a>
+        </div>
+    </c:if>
+    <c:if test="${empty user}">
+        <li><a class="signin" data-toggle="modal" data-target="#log-wrapper">请先登录</a></li>
+    </c:if>
+
 </div>
 </section>
 

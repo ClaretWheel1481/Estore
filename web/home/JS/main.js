@@ -180,11 +180,6 @@
         $("#signup-email_adress").keyup(function () {
             email_complete(this);
         })
-        /*验证码*/
-        $("#password-1").focus(function () {
-            $('#sign-form-1 .captcha').animate({height: "49px"}, 300);
-            $('#sign-form-1 .captcha').css("border-top", "1px solid #d5d5d5");
-        });
 
         /*购买页面*/
         var ul = $(".product-img ul");
@@ -270,8 +265,6 @@
             $('#sign-form-1 .captcha').css({"border-top": "0", "height": "0"});
             $("form span").css("transform", "translateX(200px)");
             $("#repassword").focus(function () {
-                $("#sign-form-2 .captcha").animate({height: "49px"}, 300);
-                $('#sign-form-2 .captcha').css("border-top", "1px solid #d5d5d5");
                 $("form span").css("transform", "translateX(0px)");
             });
         }

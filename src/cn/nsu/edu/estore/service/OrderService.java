@@ -10,7 +10,6 @@ public class OrderService {
     public int addOrder(Order order) throws addOrderException {
         OrderDao dao=new OrderDao();
         int i = 0;
-
         try {
             i = dao.addOrder(order);
         } catch (SQLException e) {

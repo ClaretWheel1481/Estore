@@ -22,37 +22,21 @@ import cn.nsu.edu.estore.service.OrderService;
 public class AddOrderServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        //1.得到实体类对象，将数据封装至实体类中
-        Order order=new Order();
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Order order = new Order();
         try {
             BeanUtils.populate(order, request.getParameterMap());
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (IllegalAccessException | InvocationTargetException e) {
+            System.out.println(e);
             e.printStackTrace();
         }
-
-        OrderService service=new OrderService();
+        OrderService service = new OrderService();
         try {
             service.addOrder(order);
-            response.sendRedirect(request.getContextPath()
-                    + "/index.jsp");
-            return;
+            response.sendRedirect(request.getContextPath() + "/index.jsp");
         } catch (addOrderException e) {
             request.setAttribute("addOrder.message", e.getMessage());
-            request.getRequestDispatcher("/error/addOrder_error.jsp").forward(request,
-                    response);
-            return;
+            request.getRequestDispatcher("/error/addOrder_error.jsp").forward(request, response);
         }
     }
-
-    /**
-     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-     */
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
-        doGet(request, response);
-    }
-
 }

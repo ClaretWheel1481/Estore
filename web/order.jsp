@@ -29,31 +29,34 @@
     </div>
 
     <c:set value="0" var="money"></c:set>
-    <ul class="order-content">
-        <c:forEach items="${cart}" var="c">
+    <form action="${pageContext.request.contextPath}/AddOrderServlet" method="post">
+        <ul class="order-content">
+            <c:forEach items="${cart}" var="c">
+                <input type="hidden" name="money" value="${c.key.price*c.value}">
+                <input type="hidden" name="user_id" value="${user.id}">
+                <ul>
+                    <li>
+                        <img src="/upload/${c.key.imgurl}">
+                    </li>
+                    <li>
+                        <div class="order-details">${c.key.description}</div>
+                    </li>
+                    <li><span class="price">${c.key.price }</span></li>
+                    <li><span class="order-count">${c.value}</span></li>
+                </ul>
+                <c:set value="${money+c.key.price*c.value}" var="money"></c:set>
+            </c:forEach>
+            <div class="order-sum">${money}</div>
+        </ul>
+        <div class="order-foot">
             <ul>
                 <li>
-                    <img src="/upload/${c.key.imgurl}">
+                    <input class="order-adress" name="receiverinfo" aria-label="送货地址" placeholder="送货地址" type="text">
                 </li>
-                <li>
-                    <div class="order-details">${c.key.description}</div>
-                </li>
-                <li><span class="price">${c.key.price }</span></li>
-                <li><span class="order-count">${c.value}</span></li>
+                <li><button type="submit" class="sum-btn">生成订单</button></li>
             </ul>
-            <c:set value="${money+c.key.price*c.value}" var="money"></c:set>
-        </c:forEach>
-
-        <div class="order-sum">${money}</div>
-    </ul>
-    <div class="order-foot">
-        <ul>
-            <li>
-                <input class="order-adress" aria-label="送货地址" placeholder="送货地址" type="text">
-            </li>
-            <li><a class="sum-btn" href="${pageContext.request.contextPath}/AddOrderServlet">生成订单</a></li>
-        </ul>
-    </div>
+        </div>
+    </form>
 </section>
 <footer>
     <jsp:include page="footer.jsp"></jsp:include>

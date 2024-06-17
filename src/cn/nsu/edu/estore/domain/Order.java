@@ -3,8 +3,6 @@ package cn.nsu.edu.estore.domain;
 import java.sql.Timestamp;
 
 public class Order {
-
-
     private int id; // 订单号
     private double money; // 金额
     private String receiverinfo; // 收货人信息

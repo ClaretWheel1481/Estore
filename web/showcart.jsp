@@ -69,7 +69,7 @@
     function removeProduct(id) {
         var flag = window.confirm("要删除商品码?");
         if (flag) {
-            location.href = "${pageContext.request.contextPath}/RemoveProductFromCartServlet?id="+ id;
+            location.href = "${pageContext.request.contextPath}/RemoveProductFromCartServlet?id=" + id;
         }
     }
 
@@ -108,9 +108,20 @@
 <jsp:include page="login.jsp"></jsp:include>
 
 <c:if test="${ empty cart }">
-    购物车中没有商品
+    <div style="align-items: center; display: flex; justify-content: center;">
+        <div style="align-items: center; display: flex; justify-content: center;">
+            <div style="margin-top: 300px"></div>
+            <span>
+                <p style="font-size: 22px">购物车空空如也</p>
+                <p style="font-size: 22px">快去购物吧</p>
+                <a href="home.jsp" style="font-size: 28px">>去购物</a>
+            </span>
+            <div style="margin-top: 300px"></div>
+
+        </div>
+    </div>
 </c:if>
-<!-- 购物车里有数据时的操作			START -->
+
 <c:if test="${not empty cart}">
     <section class="Carts">
         <div class="head">待结算商品</div>
@@ -159,7 +170,6 @@
                     </li>
                     <li><span class="price">${c.key.price }</span></li>
                     <li>
-
                         <div class="count-box">
                             <input class="min" name="" type="button" value="-"
                                    onclick="changeCount('${c.key.id}','${c.value-1}')"/>
@@ -169,10 +179,8 @@
                             <input class="add" name="" type="button" value="+"
                                    onclick="changeCount('${c.key.id}','${c.value+1}','${c.key.pnum}')"/>
                         </div>
-
                     </li>
                     <li><span class="price">${totalMoney+c.key.price*c.value}</span></li>
-
                     <li><a href="javascript:void(0)" onclick="removeProduct('${c.key.id}')">删除</a></li>
                 </ul>
                 <c:set var="totalMoney" value="${totalMoney+c.key.price*c.value}"/>
