@@ -6,6 +6,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>交易</title>
 </head>
+<%--导航栏--%>
+<jsp:include page="header.jsp"></jsp:include>
 <body>
 <p>交易成功</p>
 

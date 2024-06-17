@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <c3p0-config>
 	<default-config>
-		<property name="user">root</property>
-		<property name="password">1234</property>
+		<property name="user">EStore</property>
+		<property name="password">Sing5200</property>
 		<property name="driverClass">com.mysql.jdbc.Driver</property>
-		<property name="jdbcUrl">jdbc:mysql://localhost:3306/estore</property>
+		<property name="jdbcUrl">jdbc:mysql://cloud.claret.space:9936/estore?useSSL=false</property>
 	</default-config> 
 </c3p0-config> 

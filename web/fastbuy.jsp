@@ -17,7 +17,6 @@
         <a href="javascript:void(0)" onclick="phone('手机')">手机</a>
         <a href="javascript:void(0)" onclick="phone('平板')">平板</a>
         <a href="javascript:void(0)" onclick="phone('笔记本')">笔记本</a>
-        <a href="javascript:void(0)" onclick="phone('配件')">配件</a>
         <span class="slider-bar"></span>
         <i class="carts" onclick="tocart()"></i>
         <span><c:if test="${not empty user }">
@@ -68,26 +67,8 @@
             </ul>
         </div>
     </section>
-    <aside class="aside-tool">
-    <ul>
-        <li class="customer">
-            <a href="http://wpa.qq.com/msgrd?v=3&uin=476759153&site=qq&menu=yes" target=_blank
-               clickid=guanwang_navigation_customer>联系客服</a>
-        </li>
-        <li class="top"></li>
-    </ul>
-</aside>
-    <footer>
-   <div>
-       <ul>
-           <li>开发人员1</li>
-           <li>唐宗博</li>
-       </ul>
-       <ul>
-           <li>开发人员2</li>
-           <li>辜鹏</li>
-       </ul>
-    </div>
+<footer>
+    <jsp:include page="footer.jsp"></jsp:include>
 </footer>
 
 	<script type="text/javascript">

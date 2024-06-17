@@ -8,15 +8,16 @@
 <title>单个商品详细信息</title>
 <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
 </head>
+<%--导航栏--%>
+<jsp:include page="header.jsp"></jsp:include>
 <body>
-
 <section class="w">
 <div class="product-img">
     <div class="handle">
         <div class="thumb">
             <ul>
                 <li class="n-hover">
-                    <img src="/upload/${pro.imgurl }">
+                    <img src="/upload/${ pro.imgurl }">
                 </li>
                 <li class="">
                     <img src="http://img001.fview.cn/Public/upload/product/e086ecc18effe218e6f9cefeb1745b83.jpg">
@@ -59,10 +60,10 @@
         <span class="price">${pro.price }</span>
     </p>
     <ul class="details">
-        <li><span>颜色</span><a class="u-check n-check">${pro.color }</a></li>
-        <li><span>内存</span><a class="u-check n-check">64G</a></li>
-        <li><span>版本</span><a class="u-check n-check">联通4G/移动4G/电信4G</a></li>
-        <li><span>销售地区</span><a class="u-check n-check">加拿大</a></li>
+        <li><span>颜色</span><a class="u-check n-check">${ pro.color }</a></li>
+        <li><span>内存</span><a class="u-check n-check">512G</a></li>
+        <li><span>版本</span><a class="u-check n-check">全网通</a></li>
+        <li><span>销售地区</span><a class="u-check n-check">中国</a></li>
         <li><span>购买数量：</span>
             <div class="count-box">
                     <input class="min" name="" type="button" value="-"/>

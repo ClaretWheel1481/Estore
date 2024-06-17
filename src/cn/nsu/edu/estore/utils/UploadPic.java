@@ -11,9 +11,6 @@ import java.io.InputStream;
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.io.IOUtils;
 
-import com.sun.image.codec.jpeg.JPEGCodec;
-import com.sun.image.codec.jpeg.JPEGImageEncoder;
-
 public class UploadPic {
 
     private static String path = "c:\\upload";

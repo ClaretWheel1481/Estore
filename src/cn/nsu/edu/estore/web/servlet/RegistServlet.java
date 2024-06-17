@@ -44,9 +44,7 @@ public class RegistServlet extends HttpServlet {
         User user = new User();
         try {
             BeanUtils.populate(user, request.getParameterMap());
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
         /* 2.得到所有请求参数，封装到User对象中.	END*/

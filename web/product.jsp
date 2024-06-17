@@ -23,36 +23,14 @@ function findProductById(id){
 function showck(obj) {
 	location.href="http://localhost:8080/Estore/ProductFindByPageCodeServlet?code="+obj;
 }
-function tocart() {
-	location.href="http://localhost:8080/Estore/showcart.jsp";
-}
 </script>
 </head>
 <body>
 <div id="preloader" >
     <div id="status" ></div>
 </div>
-<header>
-    <nav class="navbar navbar-inverse" role="navigation">
-     <div class="logo"></div>
-        <a href="ProductFindAllServlet">首页</a>
-        <a href="javascript:void(0)" onclick="phone('手机')">手机</a>
-        <a href="javascript:void(0)" onclick="phone('平板')">平板</a>
-        <a href="javascript:void(0)" onclick="phone('笔记本')">笔记本</a>
-        <a href="javascript:void(0)" onclick="phone('配件')">配件</a>
-        <span class="slider-bar"></span>
-        <i class="carts" onclick="tocart()"></i>
-        <span><c:if test="${not empty user }">
-        			 <h4 class="user">${user.username}</h4>
-					 <a class="logout" href="${pageContext.request.contextPath}/LoginOutServlet">注销</a>
-			</c:if>
-			<c:if test="${ empty user }">
-        		<h4 class="signin" data-toggle="modal" data-target="#log-wrapper">登录</h4>
-            	<h4 class="signup" data-toggle="modal" data-target="#log-wrapper">注册</h4>
-            </c:if>
-		</span>
-    </nav>
-</header>
+<%--导航栏--%>
+<jsp:include page="header.jsp"></jsp:include>
 
 <!--登录注册-->
 <div id="log-wrapper" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"

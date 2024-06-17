@@ -21,7 +21,6 @@ public class UserService {
         try {
             //1.添加注册用户信息
             dao.addUser(user);
-            //2.向注册用户发送激活邮件
             String emailMsg = "注册成功，请点击下列连接已完成激活操作:(ps:由于邮箱原因，请复制链接打开！)"+"<br>"+
                     "http://localhost:8080/Estore/UserActiveServlet?activeCode="+user.getActivecode();
             MailUtils.sendMail(user.getEmail(), emailMsg);
