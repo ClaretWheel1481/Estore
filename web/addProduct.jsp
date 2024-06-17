@@ -35,24 +35,6 @@ function add() {
 				<input type="hidden" name="c3code" id="c3code"></td>
 			</tr>
 			<tr>
-				<td>商品类别</td>
-				<td>一级分类：
-					<select id="onelevel" onchange="select_onelevel()">
-						<option value="">-请选择-</option>
-						<c:forEach var="l" items="${onelevel}">
-							<option value="${l.code}">${l.name}</option>
-						</c:forEach>
-					</select>
-					二级分类：
-					<select id="twolevel" onchange="selsct_twolevel()">
-						<option value="">-请选择-</option>
-					</select>
-					三级分类：
-				<select id="threelevel">
-					<option value="">-请选择-</option>
-				</select></td>
-			</tr>
-			<tr>
 				<td>商品图片</td>
 				<td><input type="file" name="f"></td>
 			</tr>

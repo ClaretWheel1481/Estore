@@ -120,10 +120,11 @@ header {
 
 .logo{
     height: 60px;
-    width: 180px;
+    width: 200px;
     position: absolute;
     left: 4%;
     top: calc(50% - 30px);
+    cursor: pointer;
 }
 
 .disabled {
@@ -694,7 +695,7 @@ em.fast-buy {
 
 em.fast-buy:before {
     font-style: normal;
-    content: "快速抢购";
+    content: "查看详细";
 }
 
 em.fast-buy:active {

@@ -48,7 +48,7 @@
 </div>
 <div class="product-details">
     <h1>${pro.description}</h1>
-    <p class="re"><span>产品编号：</span><span>RE201612101843132</span></p>
+    <p class="re"><span>产品编号：</span><span>QVTU22103307</span></p>
     <p class="price" data-price="3649">
         <span>价格</span>
         <span class="price">${ pro.price }</span>
