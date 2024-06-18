@@ -34,8 +34,6 @@ public class ProductFindAllServlet extends HttpServlet {
             request.setAttribute("pro2", pro2);
             List<Product> pro3 = service.findByCode("53");
             request.setAttribute("pro3", pro3);
-            List<Product> pro4 = service.findByCode("54");
-            request.setAttribute("pro4", pro4);
             User user = (User) request.getSession().getAttribute("user");
             if (user == null || user.getRole().equals("user")) {
                 request.getRequestDispatcher("/home.jsp").forward(request, response);
@@ -52,7 +50,6 @@ public class ProductFindAllServlet extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
         doGet(request, response);
     }
 

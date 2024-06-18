@@ -22,6 +22,10 @@
     function toHome() {
         location.href = "http://localhost:8080/Estore/";
     }
+
+    function toOrders() {
+        location.href = "http://localhost:8080/Estore/orders.jsp";
+    }
 </script>
 <html>
 <link rel="stylesheet" type="text/css" href="home/CSS/jquery-ui.css">
@@ -34,11 +38,15 @@
         <a href="javascript:void(0)" onclick="phone('手机')">手机</a>
         <a href="javascript:void(0)" onclick="phone('平板')">平板</a>
         <a href="javascript:void(0)" onclick="phone('笔记本')">笔记本</a>
-        <i class="carts" onclick="tocart()"></i>
-        <span><c:if test="${not empty user }">
-            <h4 class="user">${user.username}</h4>
-            <a class="logout" href="${pageContext.request.contextPath}/LoginOutServlet">退出登录</a>
+        <c:if test="${not empty user}">
+            <a href="javascript:void(0)" onclick="toOrders()">查看我的订单</a>
         </c:if>
+        <i class="carts" onclick="tocart()"></i>
+        <span>
+            <c:if test="${not empty user }">
+            <h4 class="user">${user.username}</h4>
+            <a class="logout" href="${pageContext.request.contextPath}/LoginOutServlet">退出</a>
+            </c:if>
 			<c:if test="${ empty user }">
                 <h4 class="signin" data-toggle="modal" data-target="#log-wrapper">登录</h4>
                 <h4 class="signup" data-toggle="modal" data-target="#log-wrapper">注册</h4>

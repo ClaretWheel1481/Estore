@@ -15,8 +15,6 @@
         }
     </script>
 </head>
-<%--导航栏--%>
-<jsp:include page="adminheader.jsp"></jsp:include>
 <body>
 <form action="${pageContext.request.contextPath}/ProductUpdateServlet" method="post" encType="multipart/form-data"
       id="modif">

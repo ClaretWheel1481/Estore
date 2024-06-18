@@ -65,10 +65,7 @@ public class AddProductToCartServlet extends HttpServlet {
             cart.put(p, count);
             // 将购物车存储到session中.
             session.setAttribute("cart", cart);
-
             response.sendRedirect(request.getContextPath()+"/addProductToCartSuccessfull.jsp");
-            //		response.getWriter().write("添加商品到购物车成功，<a href='http://localhost:8080/Estore'>继续购物</a>,<a href='http://localhost:8080/Estore/showcart.jsp'>查看购物车</a>");
-            return;
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -80,7 +77,6 @@ public class AddProductToCartServlet extends HttpServlet {
      * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
      */
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        // TODO Auto-generated method stub
         doGet(request, response);
     }
 

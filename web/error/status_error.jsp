@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../home/CSS/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="../home/CSS/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="../home/CSS/main.css">
-    <title>登录失败</title>
+    <title>你没有登录</title>
 </head>
 <body>
 <div id="preloader">
@@ -29,7 +29,7 @@
                 </h1>
                 <h2>
                     <i class="fa fa-warning"></i>
-                    账号或密码错误！
+                    你还没有登录！
                 </h2>
                 <a href="../index.jsp" style="font-size: 28px">>回到首页</a>
             </div>

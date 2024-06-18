@@ -269,8 +269,7 @@
             });
         }
 
-
-//邮箱自动补全
+        //邮箱自动补全
         function email_complete(eid) {
             var inputVal = $(eid).val();
             var myVal = inputVal.split("@");

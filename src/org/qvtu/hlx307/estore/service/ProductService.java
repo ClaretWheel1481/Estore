@@ -69,11 +69,6 @@ public class ProductService {
         dao.delById(id);
     }
 
-    //删除选中数据
-    public void delSelect(int[] id) throws SQLException {
-        dao.delSelect(id);
-    }
-
     //根据所传值得到在该分类的商品
     public List<Product> findByCode(String code) throws SQLException {
         return dao.findByCode(code);

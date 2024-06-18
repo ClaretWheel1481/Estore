@@ -44,7 +44,6 @@ public class DataSourceUtils {
             con.commit();// 事务提交
             con.close();
             tl.remove();
-
         }
     }
 

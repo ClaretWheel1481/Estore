@@ -29,7 +29,6 @@ public class LinkageServlet extends HttpServlet {
             try {
                 List<HashMap<String, Object>>  name = service.getNextName(code);
                 request.getSession().setAttribute("c3name", name);
-                // 将集合对象转换成json格式---List---JsonArr字符串[{},{},{}]
                 String aString = JSONArray.fromObject(name).toString();
                 out.print(aString);
             } catch (Exception e) {

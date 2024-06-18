@@ -5,28 +5,10 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Claret Store</title>
     <link rel="stylesheet" type="text/css" href="home/CSS/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="home/CSS/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
-    <script type="text/javascript">
-        function change() {
-            document.getElementById("cimg").src = "${pageContext.request.contextPath}/checkImg?time=" + new Date().getTime();
-        }
-
-        function findProductById(id) {
-            location.href = "http://localhost:8080/Estore/ProductFindByIdServlet?id=" + id;
-        }
-
-        function phone(obj) {
-            location.href = "${pageContext.request.contextPath}/FindCategoryServlet?name=" + encodeURIComponent(encodeURIComponent(obj));
-        }
-
-        function tocart() {
-            location.href = "http://localhost:8080/Estore/showcart.jsp";
-        }
-    </script>
 </head>
 <body>
 <div id="preloader">
@@ -135,5 +117,22 @@
 <script type="text/javascript" src="home/JS/bootstrap.min.js"></script>
 <script type="text/javascript" src="home/JS/bg-canvas.js"></script>
 <script type="text/javascript" src="home/JS/main.js"></script>
+<script type="text/javascript">
+    function change() {
+        document.getElementById("cimg").src = "${pageContext.request.contextPath}/checkImg?time=" + new Date().getTime();
+    }
+
+    function findProductById(id) {
+        location.href = "http://localhost:8080/Estore/ProductFindByIdServlet?id=" + id;
+    }
+
+    function phone(obj) {
+        location.href = "${pageContext.request.contextPath}/FindCategoryServlet?name=" + encodeURIComponent(encodeURIComponent(obj));
+    }
+
+    function tocart() {
+        location.href = "http://localhost:8080/Estore/showcart.jsp";
+    }
+</script>
 </body>
 </html>

@@ -19,11 +19,9 @@ public class UploadPic {
     public static void savePic(FileItem item, String filename) throws IOException {
         //创建文件上传路
         File file = new File(path);
-
         //判断路径是否存在
         if (!file.exists())
             file.mkdirs();
-
         //获取item中的上传文件的输入流
         InputStream in = item.getInputStream();
         //创建一个文件输出流
@@ -42,7 +40,6 @@ public class UploadPic {
         out.close();
         //删除处理文件上传时生成的临时文件
         item.delete();
-
     }
 
     public String getPath() {
