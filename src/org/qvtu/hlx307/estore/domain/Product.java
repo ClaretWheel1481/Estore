@@ -5,6 +5,7 @@ public class Product {
     private String name; // 名称
     private double price; // 价格
     private int pnum; // 数量
+    private int fathercode;
     private int c3code;
     private String imgurl; // 图片路径
     private String description; // 描述
@@ -35,6 +36,13 @@ public class Product {
         this.price = price;
     }
 
+    public int getFathercode() {
+        return fathercode;
+    }
+
+    public void setFathercode(int fathercode) {
+        this.fathercode = fathercode;
+    }
 
     public int getC3code() {
         return c3code;

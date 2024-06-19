@@ -21,13 +21,14 @@ INSERT INTO `category` VALUES ('510102', 'iPhone 15 Pro Max', '5101');
 INSERT INTO `category` VALUES ('5102', 'Samsung', '51');
 INSERT INTO `category` VALUES ('510201', 'Galaxy S24', '5102');
 INSERT INTO `category` VALUES ('510202', 'Galaxy S23', '5102');
-INSERT INTO `category` VALUES ('5103', '华为', '51');
+INSERT INTO `category` VALUES ('5103', 'Huawei', '51');
 INSERT INTO `category` VALUES ('510301', 'Huawei Mate 60 Pro', '5103');
 INSERT INTO `category` VALUES ('510302', 'Huawei Pure 70', '5103');
-INSERT INTO `category` VALUES ('5104', '小米', '51');
+INSERT INTO `category` VALUES ('5104', 'XiaoMi', '51');
 INSERT INTO `category` VALUES ('510401', 'XiaoMi 14', '5104');
-INSERT INTO `category` VALUES ('5105', '魅族', '51');
+INSERT INTO `category` VALUES ('5105', 'MEIZU', '51');
 INSERT INTO `category` VALUES ('510501', 'MEIZU 21 Note', '5105');
+INSERT INTO `category` VALUES ('510502', 'MEIZU 20 INFINITY', '5105');
 INSERT INTO `category` VALUES ('52', '平板', '0');
 INSERT INTO `category` VALUES ('5201', 'Apple', '52');
 INSERT INTO `category` VALUES ('520101', 'iPad Pro 2024', '5201');
@@ -36,7 +37,7 @@ INSERT INTO `category` VALUES ('53', '笔记本', '0');
 INSERT INTO `category` VALUES ('5301', 'MacBook', '53');
 INSERT INTO `category` VALUES ('530101', 'MacBook Air 2024', '5301');
 INSERT INTO `category` VALUES ('530102', 'MacBook Pro 2024', '5301');
-INSERT INTO `category` VALUES ('5302', 'Surface', '53');
+INSERT INTO `category` VALUES ('5302', 'Microsoft', '53');
 INSERT INTO `category` VALUES ('530201', 'Surface Pro 11', '5302');
 INSERT INTO `category` VALUES ('530202', 'Surface Laptop 7', '5302');
 
@@ -65,31 +66,33 @@ CREATE TABLE `products` (
   `name` varchar(40) DEFAULT NULL,
   `price` double DEFAULT NULL,
   `pnum` int(11) DEFAULT NULL,
+  `fathercode` int(11) DEFAULT NULL,
   `c3code` int(11) DEFAULT NULL,
   `imgurl` varchar(100) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
   `color` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of products
 -- ----------------------------
-INSERT INTO `products` VALUES ('1', 'Apple', '5099', '122', '510108', '1.jpg', 'iPhone 15', '黑色');
-INSERT INTO `products` VALUES ('2', 'Apple', '7099', '23', '510109', '2.jpg', 'iPhone 15 Pro', '太空黑');
-INSERT INTO `products` VALUES ('3', 'Apple', '11199', '152', '510102', '3.jpg', 'iPhone 15 Pro Max', '白色');
-INSERT INTO `products` VALUES ('4', 'Samsung', '4699', '220', '510201', '4.jpg', 'Galaxy S24', '白色');
-INSERT INTO `products` VALUES ('5', 'Samsung', '3549', '456', '510202', '5.jpg', 'Galaxy S23', '银色');
-INSERT INTO `products` VALUES ('6', 'Apple', '6499', '266', '520101', '6.jpg', 'iPad Pro 2024', '白色');
-INSERT INTO `products` VALUES ('7', 'Apple', '3599', '555', '520102', '7.jpg', 'iPad Mini 7', '白色');
-INSERT INTO `products` VALUES ('8', '华为', '5449', '9999', '510301', '8.jpg', 'Huawei Mate 60 Pro', '白色');
-INSERT INTO `products` VALUES ('9', '华为', '5499', '200', '510302', '9.jpg', 'Huawei Pura 70', '白色');
-INSERT INTO `products` VALUES ('10', '小米', '4499', '12', '510401', '10.jpg', 'Xiaomi 14', '黑色');
-INSERT INTO `products` VALUES ('11', 'MacBook', '7999', '265', '530101', '11.jpg', 'MacBook Air 2024', '银色');
-INSERT INTO `products` VALUES ('12', 'MacBook', '11299', '999', '530102', '12.jpg', 'MacBook Pro 2024', '银色');
-INSERT INTO `products` VALUES ('13', 'Surface', '11188', '999', '530202', '13.jpg', 'Surface Laptop 7', '银色');
-INSERT INTO `products` VALUES ('14', '魅族', '2599', '999', '510501', '14.jpg', 'MEIZU 21 Note', '魅族白');
-INSERT INTO `products` VALUES ('15', 'Surface', '8688', '999', '530201', '15.jpg', 'Surface Pro 11', '银色');
+INSERT INTO `products` VALUES ('1', 'Apple', '5099', '122', '5101','510108', '1.jpg', 'iPhone 15', '黑色');
+INSERT INTO `products` VALUES ('2', 'Apple', '7099', '23', '5101','510109', '2.jpg', 'iPhone 15 Pro', '太空黑');
+INSERT INTO `products` VALUES ('3', 'Apple', '11199', '152', '5101','510102', '3.jpg', 'iPhone 15 Pro Max', '白色');
+INSERT INTO `products` VALUES ('4', 'Samsung', '4699', '220', '5102','510201', '4.jpg', 'Galaxy S24', '白色');
+INSERT INTO `products` VALUES ('5', 'Samsung', '3549', '456', '5102','510202', '5.jpg', 'Galaxy S23', '银色');
+INSERT INTO `products` VALUES ('6', 'Apple', '6499', '266', '5201','520101', '6.jpg', 'iPad Pro 2024', '白色');
+INSERT INTO `products` VALUES ('7', 'Apple', '3599', '555', '5201','520102', '7.jpg', 'iPad Mini 7', '白色');
+INSERT INTO `products` VALUES ('8', 'Huawei', '5449', '9999', '5103','510301', '8.jpg', 'Huawei Mate 60 Pro', '白色');
+INSERT INTO `products` VALUES ('9', 'Huawei', '5499', '200', '5103','510302', '9.jpg', 'Huawei Pura 70', '白色');
+INSERT INTO `products` VALUES ('10', 'XiaoMi', '4499', '12', '5104','510401', '10.jpg', 'Xiaomi 14', '黑色');
+INSERT INTO `products` VALUES ('11', 'MacBook', '7999', '265', '5301','530101', '11.jpg', 'MacBook Air 2024', '银色');
+INSERT INTO `products` VALUES ('12', 'MacBook', '11299', '999', '5301','530102', '12.jpg', 'MacBook Pro 2024', '银色');
+INSERT INTO `products` VALUES ('13', 'Microsoft', '11188', '999', '5301','530202', '13.jpg', 'Surface Laptop 7', '银色');
+INSERT INTO `products` VALUES ('14', 'MEIZU', '2599', '999', '5105','510501', '14.jpg', 'MEIZU 21 Note', '魅族白');
+INSERT INTO `products` VALUES ('15', 'Microsoft', '8688', '999', '5302','530201', '15.jpg', 'Surface Pro 11', '银色');
+INSERT INTO `products` VALUES ('16', 'MEIZU', '3599', '123', '5105','510502', '16.jpg', 'MEIZU 20 INFINITY', '黑色');
 -- ----------------------------
 -- Table structure for `users`
 -- ----------------------------

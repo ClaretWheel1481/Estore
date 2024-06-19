@@ -14,12 +14,12 @@ import org.qvtu.hlx307.estore.utils.DataSourceUtils;
 public class ProductDaoImp implements ProductDao {
     //商品添加
     public void addProduct(Product product) throws SQLException {
-        String sql = "insert into products values(null,?,?,?,?,?,?,?)";
-
+        String sql = "insert into products values(null,?,?,?,?,?,?,?,?)";
+        String sql2 = "insert into category values(?,?,?)";
         QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
-
-        runner.update(sql, product.getName(), product.getPrice(),product.getPnum(),
+        runner.update(sql, product.getName(), product.getPrice(),product.getPnum(),product.getFathercode(),
                 product.getC3code(), product.getImgurl(), product.getDescription(), product.getColor());
+        runner.update(sql2, product.getC3code(), product.getDescription(),product.getFathercode());
     }
 
     //查询所有商品信息
@@ -80,9 +80,11 @@ public class ProductDaoImp implements ProductDao {
 
     //删除单个商品信息
     public int delById(int id) throws SQLException {
-        String sql = "delete from products where id=?";
+        String sql = "delete from products where c3code=?";
+        String sql2 = "delete from category where c3code=?";
         QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
-        int i =	runner.update(sql, id);
+        runner.update(sql, id);
+        int i = runner.update(sql2,id);
         return i;
     }
 

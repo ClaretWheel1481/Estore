@@ -13,7 +13,8 @@
 
         function add() {
             var options = $("#threelevel option:selected").val();
-            document.getElementById("c3code").value = options;
+            options = parseInt(options)
+            document.getElementById("c3code").value = options+1;
             document.getElementById("add").submit();
         }
     </script>
@@ -27,13 +28,38 @@
             <td><input type="text" name="name"></td>
         </tr>
         <tr>
+            <td>商品类别</td>
+            <td>一级分类：
+                <select id="onelevel" onchange="select_onelevel()">
+                    <option value="">-请选择-</option>
+                    <c:forEach var="l" items="${onelevel}">
+                        <option value="${l.code}">${l.name}</option>
+                    </c:forEach>
+                </select>
+                二级分类：
+                <select id="twolevel" onchange="selsct_twolevel()">
+                    <option value="">-请选择-</option>
+                </select>
+                三级分类：
+                <select id="threelevel">
+                    <option value="">-请选择-</option>
+                </select></td>
+        </tr>
+        <tr>
             <td>商品价格</td>
-            <td><input type="text" name="price"></td>
+            <td>
+                <input type="text" name="price">
+            </td>
+            <td>
+                <input type="hidden" name="fathercode" id="fathercode">
+            </td>
         </tr>
         <tr>
             <td>商品数量</td>
-            <td><input type="text" name="pnum">
-                <input type="hidden" name="c3code" id="c3code"></td>
+            <td>
+                <input type="text" name="pnum">
+                <input type="hidden" name="c3code" id="c3code">
+            </td>
         </tr>
         <tr>
             <td>商品图片</td>

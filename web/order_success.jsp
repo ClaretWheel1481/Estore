@@ -24,19 +24,15 @@
 <jsp:include page="header.jsp"></jsp:include>
 <!--登录注册-->
 <jsp:include page="login.jsp"></jsp:include>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div>
-                <h1>
-                    下单成功！
-                </h1>
-                <h2>
-                    想要继续购物？
-                </h2>
+<div style="align-items: center; display: flex; justify-content: center;">
+    <div style="align-items: center; display: flex; justify-content: center;">
+        <div style="margin-top: 300px"></div>
+        <span>
+                <p style="font-size: 22px">下单成功！</p>
+                <p style="font-size: 22px">想要继续购买？</p>
                 <a href="index.jsp" style="font-size: 28px">>回到首页</a>
-            </div>
-        </div>
+            </span>
+        <div style="margin-top: 300px"></div>
     </div>
 </div>
 </body>

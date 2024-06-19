@@ -42,7 +42,8 @@
         <a href="javascript:void(0)" onclick="phone('平板')">平板</a>
         <a href="javascript:void(0)" onclick="phone('笔记本')">笔记本</a>
         <c:if test="${not empty user}">
-            <a href="javascript:void(0)" onclick="toOrders(${user.id})">我的订单</a>
+            <a href="javascript:void(0)" onclick="toOrders(${user.id})">订单</a>
+            <a href="https://wpa.qq.com/msgrd?v=3&uin=245922575&site=qqq&menu=yes">客服</a>
         </c:if>
         <i class="carts" onclick="tocart()"></i>
         <span>

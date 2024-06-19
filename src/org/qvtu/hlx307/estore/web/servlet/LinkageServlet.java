@@ -22,10 +22,11 @@ public class LinkageServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         PrintWriter out=response.getWriter();
         String code = request.getParameter("levelcode");
         NodeDateService service = new NodeDateService();
-        if (code != null && !code.equals("")) {// 有变量就要进行空判断
+        if (code != null && !code.isEmpty()) {// 有变量就要进行空判断
             try {
                 List<HashMap<String, Object>>  name = service.getNextName(code);
                 request.getSession().setAttribute("c3name", name);
@@ -36,9 +37,7 @@ public class LinkageServlet extends HttpServlet {
             }
         } else {
             out.print("fail");
-            // 查询失败
         }
-
     }
 
     /**

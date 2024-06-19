@@ -27,7 +27,8 @@
 </head>
 
 <body>
-<a href="index.jsp">返回首页</a>
+<a href="${pageContext.request.contextPath}/LoginOutServlet">>退出登录</a>
+
 <c:if test="${empty pro}">
     无商品信息<br>
     <a href="${pageContext.request.contextPath}/CategoryServlet">添加</a>
@@ -79,7 +80,7 @@
                 <td>${p.description }</td>
                 <td>
                     <a href="${pageContext.request.contextPath}/ProductFindByIdServlet?id=${p.id}">编辑</a>
-                    &nbsp;<a href="javascript:void(0)" onclick="del('${p.id}')">删除</a>
+                    &nbsp;<a href="javascript:void(0)" onclick="del('${p.c3code}')">删除</a>
                 </td>
             </tr>
         </c:forEach>

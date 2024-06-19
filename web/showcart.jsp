@@ -115,10 +115,9 @@
             <span>
                 <p style="font-size: 22px">购物车空空如也</p>
                 <p style="font-size: 22px">快去购物吧</p>
-                <a href="home.jsp" style="font-size: 28px">>去购物</a>
+                <a href="index.jsp" style="font-size: 28px">>去购物</a>
             </span>
             <div style="margin-top: 300px"></div>
-
         </div>
     </div>
 </c:if>

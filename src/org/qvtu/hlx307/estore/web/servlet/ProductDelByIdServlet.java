@@ -20,7 +20,7 @@ public class ProductDelByIdServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         //获取所传id值
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("c3code"));
 
         //调用service中删除操作
         ProductService service = new ProductService();

@@ -19,21 +19,15 @@
 <div id="preloader">
     <div id="status"></div>
 </div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="error-template">
-                <h1>
-                    <i class="fa fa-warning"></i>
-                    出错啦！
-                </h1>
-                <h2>
-                    <i class="fa fa-warning"></i>
-                    账号或密码错误！
-                </h2>
+<div style="align-items: center; display: flex; justify-content: center;">
+    <div style="align-items: center; display: flex; justify-content: center;">
+        <div style="margin-top: 300px"></div>
+        <span>
+                <p style="font-size: 22px">出错啦！</p>
+                <p style="font-size: 22px">登陆错误！</p>
                 <a href="../index.jsp" style="font-size: 28px">>回到首页</a>
-            </div>
-        </div>
+            </span>
+        <div style="margin-top: 300px"></div>
     </div>
 </div>
 </body>
