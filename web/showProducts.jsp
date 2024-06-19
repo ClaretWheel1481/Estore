@@ -3,10 +3,8 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<link rel="stylesheet" type="text/css" href="home/CSS/jquery-ui.css">
-<link rel="stylesheet" type="text/css" href="home/CSS/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="home/CSS/main.css">
 <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>后台管理</title>
     <script type="text/javascript">
         function del(id) {
@@ -23,10 +21,13 @@
             document.getElementById("s").submit();
         }
     </script>
+    <link rel="stylesheet" type="text/css" href="home/CSS/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="home/CSS/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
 </head>
 
 <body>
-<a href="home.jsp">返回首页</a>
+<a href="index.jsp">返回首页</a>
 <c:if test="${empty pro}">
     无商品信息<br>
     <a href="${pageContext.request.contextPath}/CategoryServlet">添加</a>

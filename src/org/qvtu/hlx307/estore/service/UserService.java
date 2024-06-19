@@ -9,7 +9,6 @@ import org.qvtu.hlx307.estore.domain.User;
 import org.qvtu.hlx307.estore.exception.RegistException;
 
 public class UserService {
-    /* 1.注册操作		START*/
     public void regist(User user) throws RegistException {
         UserDao dao = new UserDao();
         try {
@@ -19,15 +18,11 @@ public class UserService {
         }
     }
     public User login(String username, String password) throws LoginException {
-        // 需要注意用户是否激活
         UserDao dao = new UserDao();
         try {
             User user = dao.findUserByLogin(username, password);
             if (user != null) {
-                // 判断用户是否激活
-                if (user.getState() == 1) {
-                    return user;
-                }
+                return user;
             } else {
                 throw new LoginException("用户名或密码错误");
             }
@@ -35,7 +30,6 @@ public class UserService {
             e.printStackTrace();
             throw new LoginException("用户名或密码错误");
         }
-        return null;
     }
 }
 

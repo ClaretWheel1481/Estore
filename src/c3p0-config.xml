@@ -4,6 +4,6 @@
 		<property name="user">EStore</property>
 		<property name="password">Sing5200</property>
 		<property name="driverClass">com.mysql.jdbc.Driver</property>
-		<property name="jdbcUrl">jdbc:mysql://cloud.claret.space:9936/estore?useSSL=false</property>
+		<property name="jdbcUrl">jdbc:mysql://cloud.claret.space:9936/estore?setUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC&amp;useSSL=false</property>
 	</default-config> 
 </c3p0-config> 

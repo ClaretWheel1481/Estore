@@ -4,6 +4,98 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+    <script type="text/javascript">
+        function selectCk(main) {
+            var flag = main.checked;
+            var delCks = document.getElementsByName("delCk");
+            for (var i = 0; i < delCks.length; i++) {
+                delCks[i].checked = flag;
+            }
+        }
+
+        function changeCount(id, count, pnum) {
+            //需要将count转换成数字
+            count = parseInt(count);
+            //控制边界
+            if (count <= 0) {
+                //删除
+                var flag = window.confirm("要删除商品吗?");
+                if (flag) {
+                    count = 0;
+                } else {
+                    count = 1;
+                }
+            } else if (count >= pnum) {
+                alert("最大购物数量" + pnum);
+                count = pnum;
+            }
+
+            location.href = "${pageContext.request.contextPath}/ChangeCountServlet?id="
+                + id + "&count=" + count;
+        };
+
+        function numberText(e) {
+            var keyCode;
+            if (e && e.preventDefault) {
+                //判断是firefox浏览器
+                keyCode = e.which;
+            } else {
+                //ie浏览器
+                keyCode = window.event.keyCode;
+            }
+            //alert(keyCode);
+            //0-9之间的键码值是48-57
+            if (!(keyCode >= 48 && keyCode <= 57 || keyCode == 8)) {
+                //阻止事件的默认行为
+                if (e && e.preventDefault) {
+                    // e对象存在，preventDefault方法存在 ---- 火狐浏览器
+                    e.preventDefault();
+                } else {
+                    // 不支持e对象，或者没有preventDefault方法 ---- IE
+                    window.event.returnValue = false;
+                }
+
+            }
+        };
+
+        function removeProduct(id) {
+            var flag = window.confirm("要删除商品码?");
+            if (flag) {
+                location.href = "${pageContext.request.contextPath}/RemoveProductFromCartServlet?id=" + id;
+            }
+        }
+
+        function delP() {
+            var param = ""; //它是用于拼接参数.
+            var delCks = document.getElementsByName("delCk");
+            for (var i = 0; i < delCks.length; i++) {
+                if (delCks[i].checked == true) {
+                    param += "id=" + delCks[i].value + "&";
+                }
+            }
+            if (param != "") {
+                param = param.substring(0, param.length - 1);
+                location.href = "${pageContext.request.contextPath}/RemoveSelectProductFromCartServlet?" + param;
+            }
+        };
+
+        function createOrder() {
+            location.href = "order.jsp";
+        }
+
+        function tocart() {
+            location.href = "http://localhost:8080/Estore/showcart.jsp";
+        }
+
+        function phone(obj) {
+            location.href = "${pageContext.request.contextPath}/FindCategoryServlet?name=" + encodeURIComponent(encodeURIComponent(obj));
+        }
+    </script>
+    <script type="text/javascript" src="home/JS/jquery.min.js"></script>
+    <script type="text/javascript" src="home/JS/jquery-ui.js"></script>
+    <script type="text/javascript" src="home/JS/bootstrap.min.js"></script>
+    <script type="text/javascript" src="home/JS/bg-canvas.js"></script>
+    <script type="text/javascript" src="home/JS/main.js"></script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>购物车</title>
     <link rel="stylesheet" type="text/css" href="home/CSS/bootstrap.min.css">
@@ -11,102 +103,11 @@
 
 </head>
 <body>
-
-<script type="text/javascript">
-    function selectCk(main) {
-        var flag = main.checked;
-        var delCks = document.getElementsByName("delCk");
-        for (var i = 0; i < delCks.length; i++) {
-            delCks[i].checked = flag;
-        }
-    }
-
-    function changeCount(id, count, pnum) {
-        //需要将count转换成数字
-        count = parseInt(count);
-        //控制边界
-        if (count <= 0) {
-            //删除
-            var flag = window.confirm("要删除商品吗?");
-            if (flag) {
-                count = 0;
-            } else {
-                count = 1;
-            }
-        } else if (count >= pnum) {
-            alert("最大购物数量" + pnum);
-            count = pnum;
-        }
-
-        location.href = "${pageContext.request.contextPath}/ChangeCountServlet?id="
-            + id + "&count=" + count;
-    };
-
-    function numberText(e) {
-        var keyCode;
-        if (e && e.preventDefault) {
-            //判断是firefox浏览器
-            keyCode = e.which;
-        } else {
-            //ie浏览器
-            keyCode = window.event.keyCode;
-        }
-        //alert(keyCode);
-        //0-9之间的键码值是48-57
-        if (!(keyCode >= 48 && keyCode <= 57 || keyCode == 8)) {
-            //阻止事件的默认行为
-            if (e && e.preventDefault) {
-                // e对象存在，preventDefault方法存在 ---- 火狐浏览器
-                e.preventDefault();
-            } else {
-                // 不支持e对象，或者没有preventDefault方法 ---- IE
-                window.event.returnValue = false;
-            }
-
-        }
-    };
-
-    function removeProduct(id) {
-        var flag = window.confirm("要删除商品码?");
-        if (flag) {
-            location.href = "${pageContext.request.contextPath}/RemoveProductFromCartServlet?id=" + id;
-        }
-    }
-
-    function delP() {
-        var param = ""; //它是用于拼接参数.
-        var delCks = document.getElementsByName("delCk");
-        for (var i = 0; i < delCks.length; i++) {
-            if (delCks[i].checked == true) {
-                param += "id=" + delCks[i].value + "&";
-            }
-        }
-        if (param != "") {
-            param = param.substring(0, param.length - 1);
-            location.href = "${pageContext.request.contextPath}/RemoveSelectProductFromCartServlet?" + param;
-        }
-    };
-
-    function createOrder() {
-        location.href = "order.jsp";
-    }
-
-    function tocart() {
-        location.href = "http://localhost:8080/Estore/showcart.jsp";
-    }
-
-    function phone(obj) {
-        location.href = "${pageContext.request.contextPath}/FindCategoryServlet?name=" + encodeURIComponent(encodeURIComponent(obj));
-    }
-
-
-</script>
 <%--导航栏--%>
 <jsp:include page="header.jsp"></jsp:include>
 
 <!--登录注册-->
 <jsp:include page="login.jsp"></jsp:include>
-
 <c:if test="${ empty cart }">
     <div style="align-items: center; display: flex; justify-content: center;">
         <div style="align-items: center; display: flex; justify-content: center;">
@@ -209,10 +210,5 @@
 <footer>
     <jsp:include page="footer.jsp"></jsp:include>
 </footer>
-<script type="text/javascript" src="home/JS/jquery.min.js"></script>
-<script type="text/javascript" src="home/JS/jquery-ui.js"></script>
-<script type="text/javascript" src="home/JS/bootstrap.min.js"></script>
-<script type="text/javascript" src="home/JS/bg-canvas.js"></script>
-<script type="text/javascript" src="home/JS/main.js"></script>
 </body>
 </html>

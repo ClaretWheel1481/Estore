@@ -3,6 +3,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
+    <script type="text/javascript" src="home/JS/jquery.min.js"></script>
+    <script type="text/javascript" src="home/JS/jquery-ui.js"></script>
+    <script type="text/javascript" src="CategoryJS/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="CategoryJS/onloada.js"></script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>后台管理</title>
     <script type="text/javascript">
         function cancel() {
@@ -31,10 +36,5 @@
     <input type="button" value="修改" onclick="modify()">
     <input type="button" value="取消" onclick="cancel()">
 </form>
-<script type="text/javascript" src="home/JS/jquery.min.js"></script>
-<script type="text/javascript" src="home/JS/jquery-ui.js"></script>
-<script type="text/javascript" src="CategoryJS/jquery-3.7.1.min.js"></script>
-<script type="text/javascript" src="CategoryJS/onloada.js"></script>
-
 </body>
 </html>

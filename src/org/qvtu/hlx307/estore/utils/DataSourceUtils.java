@@ -23,7 +23,6 @@ public class DataSourceUtils {
             con = dataSource.getConnection();
             tl.set(con);
         }
-
         return con;
     }
 

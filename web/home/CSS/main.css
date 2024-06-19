@@ -105,7 +105,12 @@ h4.user, .logout {
 }
 
 .signup {
-    padding-left: 5px;
+    padding-left: 15px;
+    border-left: 2px solid #8b86ff;
+}
+
+.login {
+    padding-left: 15px;
     border-left: 2px solid #8b86ff;
 }
 

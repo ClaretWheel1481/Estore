@@ -35,6 +35,4 @@ public class UserDao {
             return runner.query(sql, new BeanHandler<User>(User.class), username,password);
         }
     }
-
-
 }

@@ -11,7 +11,6 @@ import org.qvtu.hlx307.estore.domain.Order;
 import org.qvtu.hlx307.estore.utils.DataSourceUtils;
 
 public class OrderDao {
-
     //添加订单操作
     public int addOrder(Order order) throws SQLException {
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//注意月和小时的格式为两个大写字母

@@ -36,29 +36,26 @@ public class LoginServlet extends HttpServlet {
         String password = request.getParameter("password");
         try {
             BeanUtils.populate(user, request.getParameterMap());
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
+        } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
         //校验用户名密码数据是否为空为空
         Map<String, String> map = user.validation();
         if (!map.isEmpty()) {
             request.setAttribute("map", map);
-            request.getRequestDispatcher("/home.jsp").forward(request,
+            request.getRequestDispatcher("/index.jsp").forward(request,
                     response);
             return;
         }
-
         //调用service中登录的方法
         UserService service = new UserService();
         try {
             User user1 = service.login(username, password);
             // 登录成功
-            // 判断是否勾选了记住用户名
+            // 判断是否勾选了记住用户
             String remember = request.getParameter("remember");
             if ("on".equals(remember)) {
-                // 勾选了--考虑中文问题
+                // 勾选
                 Cookie cookie = new Cookie("remember", URLEncoder.encode(
                         user1.getUsername(), "utf-8"));
                 cookie.setMaxAge(10 * 24 * 60 * 60);
