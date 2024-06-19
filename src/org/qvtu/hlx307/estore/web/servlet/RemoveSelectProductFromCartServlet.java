@@ -1,15 +1,14 @@
 package org.qvtu.hlx307.estore.web.servlet;
 
-import java.io.IOException;
-import java.util.Map;
+import org.qvtu.hlx307.estore.domain.Product;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.qvtu.hlx307.estore.domain.Product;
+import java.io.IOException;
+import java.util.Map;
 
 /**
  * Servlet implementation class RemoveSelectProductFromCartServlet

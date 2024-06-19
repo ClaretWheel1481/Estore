@@ -85,7 +85,7 @@ public class ProductAddServlet extends HttpServlet {
             try {
                 BeanUtils.populate(product, map);
                 String fathercode = String.valueOf(product.getC3code());
-                product.setFathercode(parseInt(fathercode.substring(0,4)));
+                product.setFathercode(parseInt(fathercode.substring(0, 4)));
                 service.add(product);
                 request.getRequestDispatcher("/ProductFindAllServlet").forward(request, response);
             } catch (SQLException e) {

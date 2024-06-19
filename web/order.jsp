@@ -51,9 +51,9 @@
         <div class="order-foot">
             <ul>
                 <li>
-                    <input class="order-adress" name="receiverinfo" aria-label="送货地址" placeholder="送货地址" type="text">
+                    <input class="order-adress" name="receiverinfo" aria-label="送货地址" placeholder="送货地址" type="text" oninput="checkInput()">
                 </li>
-                <li><button type="submit" class="sum-btn">生成订单</button></li>
+                <li><button id="submit-btn" type="submit" class="sum-btn" disabled>生成订单</button></li>
             </ul>
         </div>
     </form>
@@ -72,5 +72,17 @@
 <script type="text/javascript" src="home/JS/bootstrap.min.js"></script>
 <script type="text/javascript" src="home/JS/bg-canvas.js"></script>
 <script type="text/javascript" src="home/JS/main.js"></script>
+<script type="text/javascript">
+    function checkInput() {
+        const input = document.querySelector('.order-adress');
+        const submitBtn = document.getElementById('submit-btn');
+
+        if (input.value.trim() === '') {
+            submitBtn.disabled = true;
+        } else {
+            submitBtn.disabled = false;
+        }
+    }
+</script>
 </body>
 </html>

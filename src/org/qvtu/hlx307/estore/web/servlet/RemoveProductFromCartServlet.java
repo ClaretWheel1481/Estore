@@ -1,15 +1,14 @@
 package org.qvtu.hlx307.estore.web.servlet;
 
-import java.io.IOException;
-import java.util.Map;
+import org.qvtu.hlx307.estore.domain.Product;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.qvtu.hlx307.estore.domain.Product;
+import java.io.IOException;
+import java.util.Map;
 
 /**
  * Servlet implementation class RemoveProductFromCartServlet
@@ -21,13 +20,13 @@ public class RemoveProductFromCartServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         // 得到要删除的商品的id
-        int id =Integer.parseInt( request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id"));
         // 得到购物车，从购物车中将商品删除,
         Map<Product, Integer> cart = (Map<Product, Integer>) request
                 .getSession().getAttribute("cart");
 
 
-        Product p=new Product();
+        Product p = new Product();
         p.setId(id);
 
         cart.remove(p);

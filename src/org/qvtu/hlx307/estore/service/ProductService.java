@@ -1,18 +1,17 @@
 package org.qvtu.hlx307.estore.service;
 
-import java.sql.SQLException;
-import java.util.List;
-
 import org.qvtu.hlx307.estore.dao.ProductDaoImp;
 import org.qvtu.hlx307.estore.domain.PageBean;
 import org.qvtu.hlx307.estore.domain.Product;
-import org.qvtu.hlx307.estore.domain.Order;
+
+import java.sql.SQLException;
+import java.util.List;
 
 public class ProductService {
     ProductDaoImp dao = new ProductDaoImp();
 
     //添加商品
-    public void add(Product product) throws SQLException  {
+    public void add(Product product) throws SQLException {
         dao.addProduct(product);
     }
 
@@ -41,19 +40,15 @@ public class ProductService {
         PageBean pb = new PageBean();
         try {
             List<Product> pro = dao.findByPage(pageNum, currentPage);
-
             // 查询总条数:
             int totalCount = dao.findAllCount();
-
             // 得到总页数
             int totalPage = (int) Math.ceil(totalCount * 1.0 / currentPage);
-
             pb.setTotalCount(totalCount); // 封装总条数
             pb.setTotalPage(totalPage);// 封装总页数
             pb.setPro(pro);// 封装当前页数据.
             pb.setCurrentPage(currentPage); // 封装每页条数
             pb.setPageNum(pageNum);// 封装当前页码
-
         } catch (SQLException e) {
             e.getStackTrace();
         }

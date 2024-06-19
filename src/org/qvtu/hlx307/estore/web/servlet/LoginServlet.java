@@ -1,9 +1,8 @@
 package org.qvtu.hlx307.estore.web.servlet;
 
-import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.net.URLEncoder;
-import java.util.Map;
+import org.apache.commons.beanutils.BeanUtils;
+import org.qvtu.hlx307.estore.domain.User;
+import org.qvtu.hlx307.estore.service.UserService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,11 +10,10 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.beanutils.BeanUtils;
-
-import org.qvtu.hlx307.estore.domain.User;
-import org.qvtu.hlx307.estore.service.UserService;
+import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.net.URLEncoder;
+import java.util.Map;
 
 /**
  * Servlet implementation class LoginServlet

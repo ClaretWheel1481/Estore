@@ -25,8 +25,15 @@
     <meta http-equiv="refresh" content="3;url=http://localhost:8080/Estore">
 </head>
 <body>
-<h1>
-    注册成功，<span id="s">3</span>秒后跳转到<a href='http://localhost:8080/Estore'>首页</a>
-</h1>
+<div style="align-items: center; display: flex; justify-content: center;">
+    <div style="align-items: center; display: flex; justify-content: center;">
+        <div style="margin-top: 300px"></div>
+        <span>
+                <p style="font-size: 22px">注册成功！</p>
+                <span id="s">3</span>秒后跳转到<a href='http://localhost:8080/Estore'>首页</a>
+            </span>
+        <div style="margin-top: 300px"></div>
+    </div>
+</div>
 </body>
 </html>

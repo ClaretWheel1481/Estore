@@ -1,14 +1,14 @@
 package org.qvtu.hlx307.estore.web.servlet;
 
-import java.io.IOException;
+import org.qvtu.hlx307.estore.domain.PageBean;
+import org.qvtu.hlx307.estore.service.ProductService;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.qvtu.hlx307.estore.domain.PageBean;
-import org.qvtu.hlx307.estore.service.ProductService;
+import java.io.IOException;
 
 /**
  * Servlet implementation class ProductFindByPageCodeServlet
@@ -59,11 +59,10 @@ public class ProductFindByPageCodeServlet extends HttpServlet {
 
         //调用service中查询操作
         ProductService service = new ProductService();
-        PageBean pb = service.findByPageByCode(pageNum, currentPage, (String)request.getSession().getAttribute("code"));
+        PageBean pb = service.findByPageByCode(pageNum, currentPage, (String) request.getSession().getAttribute("code"));
         request.removeAttribute("pb1");
         request.setAttribute("pb1", pb);
         request.getRequestDispatcher("/product.jsp").forward(request, response);
-        return;
 
 
     }

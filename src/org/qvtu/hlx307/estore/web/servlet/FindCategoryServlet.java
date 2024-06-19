@@ -15,9 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.qvtu.hlx307.estore.domain.NodeDate;
 import org.qvtu.hlx307.estore.service.NodeDateService;
 
-/**
- * Servlet implementation class FindCategoryServlet
- */
 @WebServlet("/FindCategoryServlet")
 public class FindCategoryServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -33,18 +30,14 @@ public class FindCategoryServlet extends HttpServlet {
             String c1name = request.getParameter("name");
             c1name = URLDecoder.decode(c1name, "utf-8");
 
-
             request.getSession().setAttribute("c1name", c1name);
             NodeDate node = service.getNodeDate(c1name);
 
-            //String code = node.getCode();
             String code="51";
             if(c1name.equals("平板")){
                 code="52";
             }else if(c1name.equals("笔记本")){
                 code="53";
-            }else if(c1name.equals("配件")){
-                code="54";
             }
 
             List<HashMap<String, Object>> c2name = service.getNextName(code);

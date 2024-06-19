@@ -17,9 +17,9 @@ public class UserDao {
         DateFormat df = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//注意月和小时的格式为两个大写字母
         java.util.Date date = new Date();//获得当前时间
         String time = df.format(date);//将当前时间转换成特定格式的时间字符串，这样便可以插入到数据库中
-        String sql = "insert into users values(null,?,?,?,?,?,?)";
+        String sql = "insert into users values(null,?,?,?,?,?)";
         QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
-        runner.update(sql, user.getUsername(),user.getPassword(),user.getEmail(), "user", 1,time);
+        runner.update(sql, user.getUsername(),user.getPassword(),user.getEmail(), "user",time);
     }
 
     // 登录

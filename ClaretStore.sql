@@ -24,11 +24,15 @@ INSERT INTO `category` VALUES ('510202', 'Galaxy S23', '5102');
 INSERT INTO `category` VALUES ('5103', 'Huawei', '51');
 INSERT INTO `category` VALUES ('510301', 'Huawei Mate 60 Pro', '5103');
 INSERT INTO `category` VALUES ('510302', 'Huawei Pure 70', '5103');
+INSERT INTO `category` VALUES ('510303', 'Huawei nova 12 Ultra','5103');
+INSERT INTO `category` VALUES ('510304', 'Huawei Mate X5', '5103');
 INSERT INTO `category` VALUES ('5104', 'XiaoMi', '51');
 INSERT INTO `category` VALUES ('510401', 'XiaoMi 14', '5104');
+INSERT INTO `category` VALUES ('510402','Redmi K70E', '5104');
 INSERT INTO `category` VALUES ('5105', 'MEIZU', '51');
 INSERT INTO `category` VALUES ('510501', 'MEIZU 21 Note', '5105');
 INSERT INTO `category` VALUES ('510502', 'MEIZU 20 INFINITY', '5105');
+INSERT INTO `category` VALUES ('510503','MEIZU 21','5105');
 INSERT INTO `category` VALUES ('52', '平板', '0');
 INSERT INTO `category` VALUES ('5201', 'Apple', '52');
 INSERT INTO `category` VALUES ('520101', 'iPad Pro 2024', '5201');
@@ -72,7 +76,7 @@ CREATE TABLE `products` (
   `description` varchar(255) DEFAULT NULL,
   `color` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of products
@@ -93,6 +97,10 @@ INSERT INTO `products` VALUES ('13', 'Microsoft', '11188', '999', '5301','530202
 INSERT INTO `products` VALUES ('14', 'MEIZU', '2599', '999', '5105','510501', '14.jpg', 'MEIZU 21 Note', '魅族白');
 INSERT INTO `products` VALUES ('15', 'Microsoft', '8688', '999', '5302','530201', '15.jpg', 'Surface Pro 11', '银色');
 INSERT INTO `products` VALUES ('16', 'MEIZU', '3599', '123', '5105','510502', '16.jpg', 'MEIZU 20 INFINITY', '黑色');
+INSERT INTO `products` VALUES ('17', 'XiaoMi', '1799', '123', '5104','510402', '17.jpg', 'Redmi K70E', '绿色');
+INSERT INTO `products` VALUES ('18', 'Huawei', '4699', '123', '5103','510303', '18.jpg', 'Huawei nova 12 Ultra', '黑色');
+INSERT INTO `products` VALUES ('19', 'MEIZU', '3999', '123', '5105','510503', '19.jpg', 'MEIZU 21', '魅族白');
+INSERT INTO `products` VALUES ('20', 'Huawei', '12999', '123', '5103','510304', '20.jpg', 'Huawei Mate X5', '深绿色');
 -- ----------------------------
 -- Table structure for `users`
 -- ----------------------------
@@ -103,7 +111,6 @@ CREATE TABLE `users` (
   `password` varchar(100) DEFAULT NULL,
   `email` varchar(100) DEFAULT NULL,
   `role` varchar(100) DEFAULT NULL,
-  `state` int(11) DEFAULT NULL,
   `updatetime` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
@@ -111,5 +118,5 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '黄林星', '123', '245922575@qq.com', 'user', '1','2024-06-15 23:20:50');
-INSERT INTO `users` VALUES ('2', 'Admin', '123', '111111@qq.com', 'admin', '1','2024-06-15 16:44:18');
+INSERT INTO `users` VALUES ('1', '黄林星', '123', '245922575@qq.com', 'user','2024-06-15 23:20:50');
+INSERT INTO `users` VALUES ('2', 'Admin', '123', '111111@qq.com', 'admin','2024-06-15 16:44:18');

@@ -1,9 +1,7 @@
 package org.qvtu.hlx307.estore.web.servlet;
 
-import java.io.IOException;
-import java.sql.SQLException;
-import java.util.HashMap;
-import java.util.Map;
+import org.qvtu.hlx307.estore.domain.Product;
+import org.qvtu.hlx307.estore.service.ProductService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,9 +9,10 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
-import org.qvtu.hlx307.estore.domain.Product;
-import org.qvtu.hlx307.estore.service.ProductService;
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Servlet implementation class AddProductToCartServlet
@@ -65,7 +64,7 @@ public class AddProductToCartServlet extends HttpServlet {
             cart.put(p, count);
             // 将购物车存储到session中.
             session.setAttribute("cart", cart);
-            response.sendRedirect(request.getContextPath()+"/addProductToCartSuccessfull.jsp");
+            response.sendRedirect(request.getContextPath() + "/addProductToCartSuccessfull.jsp");
 
         } catch (SQLException e) {
             e.printStackTrace();

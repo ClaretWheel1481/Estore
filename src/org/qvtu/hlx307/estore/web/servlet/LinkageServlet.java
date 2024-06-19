@@ -1,18 +1,17 @@
 package org.qvtu.hlx307.estore.web.servlet;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.HashMap;
-import java.util.List;
+import net.sf.json.JSONArray;
+import org.qvtu.hlx307.estore.service.NodeDateService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.qvtu.hlx307.estore.service.NodeDateService;
-import net.sf.json.JSONArray;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Servlet implementation class LinkageServlet
@@ -23,12 +22,12 @@ public class LinkageServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
-        PrintWriter out=response.getWriter();
+        PrintWriter out = response.getWriter();
         String code = request.getParameter("levelcode");
         NodeDateService service = new NodeDateService();
         if (code != null && !code.isEmpty()) {// 有变量就要进行空判断
             try {
-                List<HashMap<String, Object>>  name = service.getNextName(code);
+                List<HashMap<String, Object>> name = service.getNextName(code);
                 request.getSession().setAttribute("c3name", name);
                 String aString = JSONArray.fromObject(name).toString();
                 out.print(aString);
