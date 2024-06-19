@@ -19,9 +19,13 @@
         function tocart() {
             location.href = "http://localhost:8080/Estore/showcart.jsp";
         }
+
+        function deleteOrder(id) {
+            location.href = "http://localhost:8080/Estore/deleteOrder?id=" + id;
+        }
     </script>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>订单信息</title>
+    <title>我的订单</title>
 </head>
 <body>
 <%--TODO:订单信息待处理--%>
@@ -32,27 +36,20 @@
 <jsp:include page="login.jsp"></jsp:include>
 <table class="table" border="2" align="center">
     <tr>
-        <td>图片</td>
-        <td>品牌</td>
-        <td>数量</td>
-        <td>颜色</td>
-        <td>名称</td>
+        <td>订单ID</td>
+        <td>地址</td>
         <td>价格</td>
+        <td>下单时间</td>
         <td>操作</td>
     </tr>
-    <c:forEach items="${pro}" var="p">
+    <c:forEach items="${orderList}" var="o">
         <tr>
-            <td height="300" width="300">
-                <img alt="图片不存在或已删除" src="/upload/${p.imgurl}" width="300" height="300">
-            </td>
-            <td>${p.name}</td>
-            <td>${p.description }</td>
-            <td>${p.pnum }</td>
-            <td>${p.color }</td>
-            <td>${p.price }</td>
+            <td>${o.id}</td>
+            <td>${o.receiverinfo}</td>
+            <td>${o.money }</td>
+            <td>${o.ordertime }</td>
             <td>
-                <a href="${pageContext.request.contextPath}/ProductFindByIdServlet?id=${p.id}">编辑</a>
-                &nbsp;<a href="javascript:void(0)" onclick="del('${p.id}')">删除</a>
+                <a href="javascript:void(0)" onclick="deleteOrder('${o.id}')">删除</a>
             </td>
         </tr>
     </c:forEach>

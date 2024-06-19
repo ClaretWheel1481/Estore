@@ -6,6 +6,7 @@ import java.util.List;
 import org.qvtu.hlx307.estore.dao.ProductDaoImp;
 import org.qvtu.hlx307.estore.domain.PageBean;
 import org.qvtu.hlx307.estore.domain.Product;
+import org.qvtu.hlx307.estore.domain.Order;
 
 public class ProductService {
     ProductDaoImp dao = new ProductDaoImp();

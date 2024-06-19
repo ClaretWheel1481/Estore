@@ -25,7 +25,6 @@ public class UserDao {
     // 登录
     public User findUserByLogin(String username, String password) throws SQLException {
         if (username.contains("@")) {
-
             String sql = "select * from users where email=? and password=?";
             QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
             return runner.query(sql, new BeanHandler<User>(User.class), username,password);

@@ -119,10 +119,6 @@
 <script type="text/javascript" src="home/JS/bg-canvas.js"></script>
 <script type="text/javascript" src="home/JS/main.js"></script>
 <script type="text/javascript">
-    function change() {
-        document.getElementById("cimg").src = "${pageContext.request.contextPath}/checkImg?time=" + new Date().getTime();
-    }
-
     function findProductById(id) {
         location.href = "http://localhost:8080/Estore/ProductFindByIdServlet?id=" + id;
     }

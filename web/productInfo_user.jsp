@@ -27,10 +27,6 @@
             location.href = "http://localhost:8080/Estore/showcart.jsp";
         }
     </script>
-    <script type="text/javascript" src="home/JS/jquery-ui.js"></script>
-    <script type="text/javascript" src="home/JS/bootstrap.min.js"></script>
-    <script type="text/javascript" src="home/JS/bg-canvas.js"></script>
-    <script type="text/javascript" src="home/JS/main.js"></script>
     <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
     <link rel="stylesheet" type="text/css" href="home/CSS/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="home/CSS/bootstrap.min.css">

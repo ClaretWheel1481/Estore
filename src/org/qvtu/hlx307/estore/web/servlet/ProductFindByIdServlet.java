@@ -39,12 +39,9 @@ public class ProductFindByIdServlet extends HttpServlet {
                 return;
             }
             request.getRequestDispatcher("/productInfo_admin.jsp").forward(request, response);
-            return;
-
         } catch (SQLException e) {
             e.printStackTrace();
             response.getWriter().write(e.getMessage());
-            return;
         }
     }
 

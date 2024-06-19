@@ -27,9 +27,7 @@ public class ProductDelByIdServlet extends HttpServlet {
 
         try {
             service.delete(id);
-
             request.getRequestDispatcher("/ProductFindAllServlet").forward(request, response);
-            return;
         } catch (SQLException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();

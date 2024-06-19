@@ -47,7 +47,7 @@ class MyRequest extends HttpServletRequestWrapper {
     private boolean hasEncode;
 
     public MyRequest(HttpServletRequest request) {
-        super(request);// super必须写
+        super(request);
         this.request = request;
     }
 

@@ -9,12 +9,6 @@
     <link rel="stylesheet" type="text/css" href="home/CSS/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="home/CSS/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="home/CSS/main.css">
-    <script type="text/javascript" src="home/JS/jquery.min.js"></script>
-    <script type="text/javascript" src="home/JS/jquery-ui.js"></script>
-    <script type="text/javascript" src="home/JS/bootstrap.min.js"></script>
-    <script type="text/javascript" src="home/JS/bg-canvas.js"></script>
-    <script type="text/javascript" src="home/JS/main.js"></script>
-    <script type="text/javascript" src="CategoryJS/jquery-3.7.1.min.js"></script>
     <script type="text/javascript" src="CategoryJS/onloada.js"></script>
     <script type="text/javascript">
         function phone(obj) {

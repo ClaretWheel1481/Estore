@@ -30,6 +30,7 @@ public class LoginServlet extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setCharacterEncoding("UTF-8");
         //封装到User
         User user = new User();
         String username = request.getParameter("username");
