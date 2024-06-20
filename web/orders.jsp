@@ -34,25 +34,35 @@
 
 <!--登录注册-->
 <jsp:include page="login.jsp"></jsp:include>
-<table class="table" border="2" align="center">
-    <tr>
-        <td>订单ID</td>
-        <td>地址</td>
-        <td>价格</td>
-        <td>下单时间</td>
-        <td>操作</td>
-    </tr>
-    <c:forEach items="${orderList}" var="o">
-        <tr>
-            <td>${o.id}</td>
-            <td>${o.receiverinfo}</td>
-            <td>${o.money }</td>
-            <td>${o.ordertime }</td>
-            <td>
-                <a href="javascript:void(0)" onclick="deleteOrder('${o.id}')">删除</a>
-            </td>
-        </tr>
-    </c:forEach>
-</table>
+<c:if test="${empty user}">
+    <%--    跳转至index.jsp--%>
+    <c:redirect url="error/status_error.jsp"/>
+</c:if>
+<div style="margin: 50px">
+    <table class="table table-bordered table-hover" border="2" align="center">
+        <thead>
+            <tr>
+                <th scope="col">订单ID</th>
+                <th scope="col">地址</th>
+                <th scope="col">价格</th>
+                <th scope="col">下单时间</th>
+                <th scope="col">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        <c:forEach items="${orderList}" var="o">
+            <tr>
+                <th scope="row">${o.id}</th>
+                <td>${o.receiverinfo}</td>
+                <td>${o.money }</td>
+                <td>${o.ordertime }</td>
+                <td>
+                    <a href="javascript:void(0)" onclick="deleteOrder('${o.id}')">删除</a>
+                </td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>

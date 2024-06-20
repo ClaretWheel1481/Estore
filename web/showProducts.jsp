@@ -7,11 +7,11 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>后台管理</title>
     <script type="text/javascript">
-        function del(id) {
+        function del(c3code) {
             var flag = window.confirm("确认删除吗");
             if (flag) {
                 //确认删除
-                location.href = "${pageContext.request.contextPath}/ProductDelByIdServlet?id=" + id;
+                location.href = "${pageContext.request.contextPath}/ProductDelByIdServlet?c3code=" + c3code;
             }
         };
         function sel() {

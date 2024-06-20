@@ -41,7 +41,7 @@
                     <li>
                         <div class="order-details">${c.key.description}</div>
                     </li>
-                    <li><span class="price">${c.key.price }</span></li>
+                    <li><span class="price">${c.key.price}</span></li>
                     <li><span class="order-count">${c.value}</span></li>
                 </ul>
                 <c:set value="${money+c.key.price*c.value}" var="money"></c:set>

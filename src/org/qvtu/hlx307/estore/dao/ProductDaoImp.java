@@ -83,8 +83,8 @@ public class ProductDaoImp implements ProductDao {
         String sql = "delete from products where c3code=?";
         String sql2 = "delete from category where c3code=?";
         QueryRunner runner = new QueryRunner(DataSourceUtils.getDataSource());
-        runner.update(sql, id);
-        int i = runner.update(sql2,id);
+        int i = runner.update(sql, id);
+        runner.update(sql2,id);
         return i;
     }
 

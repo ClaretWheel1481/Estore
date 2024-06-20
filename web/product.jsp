@@ -41,8 +41,8 @@
 
 <section class="page">
     <aside id="aside" class="panel-group aside-menu">
-        <h3 class="type">${c1name }</h3>
-        <c:forEach items="${c2name}" var="p" varStatus="vs">
+        <h3 class="type">${ c1name }</h3>
+        <c:forEach items="${ c2name }" var="p" varStatus="vs">
             <dl class="panel panel-default">
                 <dt data-toggle="collapse" data-target=".${vs.index}" aria-expanded="true" data-parent="#aside"
                     onclick="selsct(${p.code},${vs.index})">
